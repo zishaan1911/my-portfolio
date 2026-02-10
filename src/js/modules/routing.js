@@ -19,11 +19,19 @@ export function routing(hash) {
 		document.getElementById('blog').classList.remove('post-open');
 	}
 
+	if (route === 'home') {
+		document.getElementById('home').style.display = 'block';
+	} else {
+		document.getElementById('home').style.display = 'none';
+	}
+
 	changeTab(route);
 }
 
 export function defaultHash() {
-	location.hash = DEFAULT_HASH;
+	history.replaceState(null, null, DEFAULT_HASH);
+
+	return DEFAULT_HASH;
 }
 
 export function removeIDFromHash() {
@@ -31,8 +39,12 @@ export function removeIDFromHash() {
 }
 
 export function initRouting() {
+	if (location.hash === '') {
+		history.replaceState(null, null, DEFAULT_HASH);
+	}
+
 	window.addEventListener('hashchange', function () {
 		routing(location.hash);
 	});
-	routing(location.hash || '#' + DEFAULT_HASH);
+	routing(location.hash || defaultHash());
 }

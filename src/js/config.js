@@ -1,6 +1,6 @@
 export const CONFIG = {
 	defaultTheme: 'ocean',
-	seasonalTheme: false, // will change the default theme based on the date
+	seasonalTheme: false, // will change the default theme based on the date (unless a theme is already set in local storage)
 
 	// effects
 	effectsDisabledByDefault: false,
@@ -8,6 +8,7 @@ export const CONFIG = {
 	displayEffectsSwitch: true,
 
 	// additional effects
+	movingText: true, // example: title text
 	crtEffect: true,
 	noiseEffect: true,
 	grungeOverlay: true,
@@ -20,6 +21,6 @@ export const CONFIG = {
 	// blog
 	blogUrl: 'https://data.richardapps.net/blog.xml', // example: '/src/example/blog.xml'
 	useExample: false,
-	writeAnimationOnPostOpen: true,
+	writeAnimationOnPostOpen: false,
 	showEstimatedReadTime: true,
 };

@@ -2,8 +2,6 @@ import { writeAnimation, tabAnimation } from './animations.js';
 import { defaultHash } from './routing.js';
 import { CONFIG } from '../config.js';
 
-const CANVAS = document.getElementById('canvas');
-
 export function changeTab(newTab) {
 	if (newTab === 'home') {
 		window.scrollTo(0, 0);

@@ -19,6 +19,7 @@ You can view the full website here:
 - [x] Add a dynamic system for news and blog-posts
 - [x] Tidy up the [style.css](/assets/css/style.css) file
 - [ ] Improve the experience for different screen resolutions and devices (1080p screens, mobile)
+- [ ] Extend the blog-functionality with more features (image support, styling options)
 
 ## Contributing
 
@@ -45,4 +46,4 @@ You're free to copy, modify, distribute, and use the source code, provided that 
 
 #### ASCII created with
 
-- [TAAG](https://patorjk.com/software/taag) by patorjk
+- [TAAG](https://patorjk.com/software/taag) by patorjk (font: Slant)

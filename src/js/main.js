@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// Special config cases
+	if (!CONFIG.movingText) {
+		document.querySelectorAll('.moving-text').forEach((el) => {
+			el.classList.remove('moving-text');
+		});
+	}
 	if (CONFIG.crtEffect) {
 		document.getElementById('canvas').classList.add('crt-effect');
 	}

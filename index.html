@@ -15,7 +15,7 @@
 
 	<link rel="preload" as="font" href="/assets/fonts/terminus-webfont.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="/assets/css/style.css?v=4"> <!-- increase version after significant changes to prevent browsers from using a old cached version (cache busting) -->
+	<link rel="stylesheet" href="/assets/css/style.css?v=5"> <!-- increase version after significant changes to prevent browsers from using the old cached version (cache busting) -->
 
 	<meta property="og:title" content="RichardApps">
 	<meta property="og:description" content="RichardApps' personal webpage! Explore a place with all my projects, pictures, and thoughts. Featuring a terminal-inspired design with stunning effects.">
@@ -50,6 +50,9 @@
 			.hide-noscript {
 				display: none;
 			}
+			.show-noscript {
+				display: block;
+			}
 			#noscript-warning {
 				color: rgb(245, 67, 67);
 				text-align: center;
@@ -77,12 +80,13 @@
 	<div id="snow-container"></div>
 	<div id="canvas">
 		<header>
-			<pre id="title">    ____  _      __                   _____                    
+			<pre id="title" class="moving-text">    ____  _      __                   _____                    
    / __ \(_)____/ /_  ____ __________/ /   |  ____  ____  _____
   / /_/ / / ___/ __ \/ __ `/ ___/ __  / /| | / __ \/ __ \/ ___/
  / _, _/ / /__/ / / / /_/ / /  / /_/ / ___ |/ /_/ / /_/ (__  ) 
 /_/ |_/_/\___/_/ /_/\__,_/_/   \__,_/_/  |_/ .___/ .___/____/  
                                           /_/   /_/            </pre>
+			<!-- created with https://patorjk.com/software/taag (font: Slant) -->
 			<h1 id="sub-title">Coding, photography, 3D-art and personal projects!</h1>
 			<p id="toggle-effects" class="hide-noscript">Want some fancy effects? Click <a id="toggle-effects-link">HERE</a> to turn them on.</p>
 		</header>
@@ -93,7 +97,7 @@
 				<li><a id="home-tab" class="tab-switcher" href="#home">Home</a></li>
 				<li><a id="projects-tab" class="tab-switcher" href="#projects">Projects</a></li>
 				<li><a id="pictures-tab" class="tab-switcher" href="#pictures">Pictures</a></li>
-				<li class="hide-noscript"><a id="blog-tab" class="tab-switcher" href="#blog">Blog</a></li>
+				<li><a id="blog-tab" class="tab-switcher" href="#blog">Blog</a></li>
 				<li class="no-mobile"><a id="resources-tab" class="tab-switcher" href="#resources">Resources</a></li>
 				<li><a id="about-tab" class="tab-switcher" href="#about">About</a></li>
 			</ul>
@@ -121,6 +125,7 @@
 								<h2>Latest Updates</h2>
 							</summary>
 							<div id="update-list">
+								<p><em>★ FEBRUARY 10TH, 2026:</em> Some new effects on the title, boxes and theme selectors :). Also made sure information is up-to-date.</p>
 								<p><em>★ NOVEMBER 11TH, 2024:</em> Adding collapsible sections to improve the experience on mobile devices, a lot of other small enhancements and new effects.</p>
 								<p><em>★ AUGUST 8TH, 2024:</em> More themes, a lot of QoL-improvements and a updated welcome post.</p>
 								<p><em>★ JUNE 30TH, 2024:</em> Added Themes! You can switch between them to the right of the update list. 'cherry' is my favorite one :).</p>
@@ -149,29 +154,18 @@
 			<h3 class="no-mobile">A short list of projects made by me!</h3>
 			<ul id="pr-list">
 				<li>
-					<p class="pr-title">NameGEN</p>
-					<p class="pr-desc">Generate random, but good sounding, names for your everyday needs! Simple, yet effective tool if you need a nickname, project name, or anything else!</p>
+					<p class="pr-title">RichardApps-web</p>
+					<p class="pr-desc">The public repository of the website's source code.</p>
+					<p class="pr-info no-mobile">[?] Feel free to report bugs, add features and contribute if you'd like! :)</p>
 					<div class="tag-list">
 						<p class="tag">HTML</p>
 						<p class="tag">CSS</p>
 						<p class="tag">JS</p>
-						<p class="tag active">Done</p>
+						<p class="tag open-source">Open-Source</p>
+						<p class="tag active">Ongoing</p>
 					</div>
 					<br>
-					<p><a href="https://namegen.richardapps.net" target="_blank">[VISIT PAGE]</a></p>
-				</li>
-				<li>
-					<p class="pr-title">VisualINC</p>
-					<p class="pr-desc">A website builder for creating awesome webpages without coding!</p>
-					<p class="pr-warning">[!] Still under development, not fully functional yet! (Current Version only supports Chrome)</p>
-					<div class="tag-list">
-						<p class="tag">HTML</p>
-						<p class="tag">CSS</p>
-						<p class="tag">JS</p>
-						<p class="tag inactive" data-tooltip="not currently being worked on">On Hold</p>
-					</div>
-					<br>
-					<p><a href="https://visualinc.richardapps.net" target="_blank">[VISIT PREVIEW]</a></p>
+					<p><a href="https://github.com/Richard-Apps/richardapps-web" target="_blank">[SOURCE CODE]</a></p>
 				</li>
 				<li>
 					<p class="pr-title">Firefox-ASCII</p>
@@ -185,18 +179,16 @@
 					<p><a href="https://github.com/Richard-Apps/firefox-ascii" target="_blank">[SOURCE CODE]</a></p>
 				</li>
 				<li>
-					<p class="pr-title">RichardApps-web</p>
-					<p class="pr-desc">The public repository of the website's source code.</p>
-					<p class="pr-info no-mobile">[?] Feel free to report bugs, add features and contribute if you'd like! :)</p>
+					<p class="pr-title">NameGEN</p>
+					<p class="pr-desc">Generate random, but good sounding, names for your everyday needs! Simple, yet effective tool if you need a nickname, project name, or anything else!</p>
 					<div class="tag-list">
 						<p class="tag">HTML</p>
 						<p class="tag">CSS</p>
 						<p class="tag">JS</p>
-						<p class="tag open-source">Open-Source</p>
-						<p class="tag active">Ongoing</p>
+						<p class="tag active">Done</p>
 					</div>
 					<br>
-					<p><a href="https://github.com/Richard-Apps/richardapps-web" target="_blank">[SOURCE CODE]</a></p>
+					<p><a href="https://namegen.richardapps.net" target="_blank">[VISIT PAGE]</a></p>
 				</li>
 				<li>
 					<p class="pr-title">Archive</p>
@@ -286,7 +278,7 @@
 						<br>
 						<p>>>> Some of my personal favorites:</p>
 						<!-- TODO: ADD HOVER PREVIEWS HERE-->
-						<p><a href="https://spaace.io/" id="test-l" target="_blank">spaace io</a>, <a href="https://www.sonarmusic.com.au/" target="_blank">sonarmusic</a>, <a href="https://loox.app/lost-in-space" target="_blank">lost-in-space</a>, <a href="https://argus.studiofreight.com/" target="_blank">argus-labs</a>, <a href="https://portal.thenifty.com/" target="_blank">thenifty-portal</a>, <a href="https://argor-heraeus.com/" target="_blank">argor-heraeus</a>, <a href="https://dnacapital.com/" target="_blank">dna-capital</a>, <a href="https://www.utsubo.com/" target="_blank">utsubo</a>, <a href="https://hexya-online.com/" target="_blank">hexya-online</a>, <a href="https://jacobleech.com/" target="_blank">jacobleech</a></p>
+						<p><a href="https://loox.app/lost-in-space" target="_blank">lost-in-space</a>, <a href="https://argus.studiofreight.com/" target="_blank">argus-labs</a>, <a href="https://portal.thenifty.com/" target="_blank">thenifty-portal</a>, <a href="https://www.utsubo.com/" target="_blank">utsubo</a>, <a href="https://hexya-online.com/" target="_blank">hexya-online</a>, <a href="https://jacobleech.com/" target="_blank">jacobleech</a></p>
 					</div>
 				</div>
 			</div>
@@ -294,6 +286,7 @@
 
 		<div id="blog" class="tabs">
 			<h1>Blog</h1>
+			<p class="show-noscript">Sorry, you need to enable JavaScript to view the blog page.</p>
 			<div id="blog-window"></div>
 		</div>
 
@@ -325,7 +318,6 @@
 						<h2>Site Goals</h2>
 						<p>Why did I made this site you may ask?</p>
 						<p>It's just nice to have a personal space where I can host and show whatever I want, while having full control over it.</p>
-						<p>Long live the indie-web!</p>
 					</div>
 					<div class="grid-row-box">
 						<h2>Social Media</h2>
@@ -337,9 +329,7 @@
 					</div>
 					<div class="grid-row-box">
 						<h2>Contact</h2>
-						<p>I mostly prefer Discord for contact! As you may have guessed, my username there is 'richardapps'.</p>
-						<br>
-						<p>Questions, wishes, inquiries, problems, and everything else can also go to:</p>
+						<p>Questions, wishes, inquiries, problems, and everything else can go to:</p>
 						<p><a href="mailto:support@richardapps.net" target="_blank">support@richardapps.net</a></p>
 					</div>
 				</div>
