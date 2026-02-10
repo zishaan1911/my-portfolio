@@ -9,7 +9,7 @@
 	<link rel="icon" type="image/png" href="src/media/favicon.png">
     <link rel="canonical" href="https://www.richardapps.net">
 
-    <script src="/src/js/archive.js" type="module"></script>
+    <!-- <script src="/src/js/archive.js" type="module"></script> -->
 </head>
 <body>
     <video
@@ -23,8 +23,8 @@
 		loop
 		playsinline>
 	</video>
-	<img id="grunge-overlay" loading="lazy">
 	<img id="noise-overlay" loading="lazy">
+	<div id="snow-container"></div>
 	<div class="vignette"></div>
 	<div id="hue"></div>
 
@@ -41,21 +41,7 @@
                 <p class="pr-desc">A YouTube channel featuring tutorials on video editing and motion graphics using a mobile app called 'AlightMotion'.</p>
                 <p class="pr-info">[?] Since I now have better hardware (PC), I understandably switched to desktop software.</p>
                 <br>
-                <p><a href="https://www.youtube.com/@LuqieDesign" target="_blank">VISIT PAGE</a></p>
-            </li>
-            <li>
-                <p class="pr-title">Old webpage</p>
-                <p class="pr-desc">My old personal webpage before I decided to fully redo it. Will not be updated, but should still work.</p>
-                <br>
-                <p><a href="https://old.richardapps.net" target="_blank">VISIT PAGE</a></p>
-            </li>
-            <li>
-                <p class="pr-title">TropicalMC</p>
-                <p class="pr-desc">A minecraft server featuring common gamemodes, while also some unique modes:</p>
-                <p class="pr-desc">-> A RPG gamemode with a explorable world, custom weapons, npc's with AI, and a main quest!</p>
-                <p class="pr-info">[?] Is currently not being worked on anymore.</p>
-                <br>
-                <p><a href="https://tropicalmc.vercel.app" target="_blank">VISIT PAGE</a></p>
+                <p><a href="https://www.youtube.com/@LuqieDesign" target="_blank">VISIT CHANNEL</a></p>
             </li>
         </ul>
         <p>..</p>
@@ -64,6 +50,12 @@
     </div>
 </body>
 <style>
+    body {
+        --main-color: rgb(207, 170, 76);
+        --bg-color: 179, 141, 64; /* example: rgba(var(--bg-color), 0.5) to use the background-color with 50% opacity */
+        --bg-opacity: 0.15;
+        --selection: #8b743b;
+    }
     #archive-title {
         font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
