@@ -64,9 +64,7 @@ export function changeTheme(theme, save = true) {
 
 	// special cases
 	const rainVideo = document.getElementById('rain-vid');
-	const snowContainer = document.getElementById('snow-container');
 	rainVideo.style.display = 'none';
-	snowContainer.innerHTML = '';
 	switch (theme) {
 		case 'rainy':
 			rainVideo.style.display = 'block';
