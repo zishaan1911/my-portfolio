@@ -65,6 +65,11 @@ export function changeTheme(theme, save = true) {
 	// special cases
 	const rainVideo = document.getElementById('rain-vid');
 	rainVideo.style.display = 'none';
+
+	if (document.getElementById('snow-container')) {
+		document.getElementById('snow-container').innerHTML = ''; // remove created snowflake elements
+	}
+
 	switch (theme) {
 		case 'rainy':
 			rainVideo.style.display = 'block';
