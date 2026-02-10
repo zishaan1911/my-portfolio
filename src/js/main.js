@@ -4,7 +4,7 @@ import { initEffects, initEffectsToggle } from './modules/effects.js';
 import { initPosts } from './modules/blog.js';
 import { initPictureColl } from './modules/navigation.js';
 import { initRouting } from './modules/routing.js';
-import { initTooltips } from './modules/utils.js';
+import { initTooltips, initRepeatingBorders } from './modules/utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	addThemeList();
@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// Special config cases
+	if (!CONFIG.movingText) {
+		document.querySelectorAll('.moving-text').forEach((el) => {
+			el.classList.remove('moving-text');
+		});
+	}
 	if (CONFIG.crtEffect) {
 		document.getElementById('canvas').classList.add('crt-effect');
 	}

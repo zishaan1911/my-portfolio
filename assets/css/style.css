@@ -53,7 +53,20 @@ body {
 	display: none;
 }
 
-/* BACKGROUND AND OVERLAYS */
+/* BACKGROUND, OVERLAYS AND EFFECTS */
+@keyframes move-text {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10%);
+	}
+}
+
+.moving-text {
+	animation: move-text 17.5s linear infinite;
+}
+
 #rain-vid,
 #noise-overlay,
 #grunge-overlay {
@@ -153,8 +166,6 @@ body {
 	}
 }
 
-/* global styles | general */
-
 ::selection {
 	background-color: var(--selection);
 }
@@ -225,7 +236,7 @@ details[open] summary {
 }
 
 details[open] summary:not(:hover) {
-	background: linear-gradient(90deg, transparent -15%, rgba(var(--bg-color), 0.3) 65%);
+	background: linear-gradient(90deg, transparent -10%, rgba(var(--bg-color), 0.4) 65%);
 }
 
 #canvas {

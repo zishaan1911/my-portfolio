@@ -130,3 +130,19 @@ a, p, h1, h2, h3, h4, li, code, pre, em, summary, span, li, i, .post, li, header
 	background-size: 100% 2px, 3px 100%;
 	pointer-events: none;
 }
+
+.tabs::after,
+#pr-list li::after,
+.post::after {
+	pointer-events: none;
+	box-shadow: 0px 0px 10px 0px var(--main-color);
+	filter: blur(3px);
+	-webkit-filter: blur(3px);
+	top: 5px;
+	left: -5px;
+	bottom: 5px;
+	right: -5px;
+	position: absolute;
+	content: '';
+	opacity: 0.375;
+}

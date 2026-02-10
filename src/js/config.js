@@ -8,6 +8,7 @@ export const CONFIG = {
 	displayEffectsSwitch: true,
 
 	// additional effects
+	movingText: true, // example: title text
 	crtEffect: true,
 	noiseEffect: true,
 	grungeOverlay: true,
