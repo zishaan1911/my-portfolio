@@ -3,26 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Richard-Apps' personal webpage! Explore a place with all my projects, pictures, and thoughts. Featuring a terminal-inspired design with stunning effects.">
-	<meta name="author" content="Richard-Apps">
+	<meta name="description" content="Zishaan Ahmed's personal webpage. Computer Science undergraduate building database engines in Rust, deployment platforms in Go, and transformers from scratch in PyTorch.">
+	<meta name="author" content="Zishaan Ahmed">
 
-	<title>RichardApps' Personal Website: Coding, Photography, and More</title>
-	
-	<link rel="icon" type="image/png" href="/assets/images/favicon.png">
-	<link rel="canonical" href="https://www.richardapps.net">
+	<title>Zishaan Ahmed — Software &amp; Systems Engineer</title>
 
-	<script type="module" src="/src/js/main.js" defer></script>
+	<!-- Paths are relative, not root-absolute, so the site works from a
+	     GitHub Pages project path (/repo-name/) as well as from a domain root. -->
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+	<link rel="canonical" href="https://zishaan1911.github.io/">
 
-	<link rel="preload" as="font" href="/assets/fonts/terminus-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+	<script type="module" src="src/js/main.js" defer></script>
 
-	<link rel="stylesheet" href="/assets/css/style.css?v=5"> <!-- increase version after significant changes to prevent browsers from using the old cached version (cache busting) -->
+	<link rel="preload" as="font" href="assets/fonts/terminus-webfont.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<meta property="og:title" content="RichardApps">
-	<meta property="og:description" content="RichardApps' personal webpage! Explore a place with all my projects, pictures, and thoughts. Featuring a terminal-inspired design with stunning effects.">
+	<link rel="stylesheet" href="assets/css/style.css?v=1"> <!-- increase version after significant changes to prevent browsers from using the old cached version (cache busting) -->
+
+	<meta property="og:title" content="Zishaan Ahmed">
+	<meta property="og:description" content="Computer Science undergraduate building database engines, cloud infrastructure and machine-learning systems.">
 	<meta property="og:image" content="">
-	<meta property="og:url" content="https://richardapps.net">
-	
-	<meta name="keywords" content="RichardApps, Richard Apps, Richard-Apps">
+	<meta property="og:url" content="https://zishaan1911.github.io/">
+
+	<meta name="keywords" content="Zishaan Ahmed, zishaan1911, software engineer, Rust, C++, databases, Malaysia">
 	<meta name="robots" content="index, follow">
 	<meta name="revisit-after" content="7 days">
 
@@ -31,6 +33,14 @@
 	<style>
         .no-fouc {
             visibility: hidden;
+        }
+
+        /* "Zishaan Ahmed" is 77 characters wide in the Slant font, against
+           "RichardApps" at 63, so the fixed desktop size is nudged down to
+           stop it overflowing between 1150px and ~1400px. Kept here rather
+           than in style.css to leave the upstream stylesheet untouched. */
+        #title {
+            font-size: 1.05em;
         }
     </style>
 </head>
@@ -66,8 +76,8 @@
 	</noscript>
 	<video
 		id="rain-vid"
-		src="/assets/videos/rain-bg.mp4"
-		poster="/assets/images/rain-bg-static.png"
+		src="assets/videos/rain-bg.mp4"
+		poster="assets/images/rain-bg-static.png"
 		preload="metadata"
 		onloadstart="this.playbackRate = 0.8;"
 		autoplay
@@ -80,14 +90,14 @@
 	<div id="snow-container"></div>
 	<div id="canvas">
 		<header>
-			<pre id="title" class="moving-text">    ____  _      __                   _____                    
-   / __ \(_)____/ /_  ____ __________/ /   |  ____  ____  _____
-  / /_/ / / ___/ __ \/ __ `/ ___/ __  / /| | / __ \/ __ \/ ___/
- / _, _/ / /__/ / / / /_/ / /  / /_/ / ___ |/ /_/ / /_/ (__  ) 
-/_/ |_/_/\___/_/ /_/\__,_/_/   \__,_/_/  |_/ .___/ .___/____/  
-                                          /_/   /_/            </pre>
+			<pre id="title" class="moving-text"> _____   _      __                         ___    __                       __
+/__  /  (_)____/ /_  ____ _____ _____     /   |  / /_  ____ ___  ___  ____/ /
+  / /  / / ___/ __ \/ __ `/ __ `/ __ \   / /| | / __ \/ __ `__ \/ _ \/ __  / 
+ / /__/ (__  ) / / / /_/ / /_/ / / / /  / ___ |/ / / / / / / / /  __/ /_/ /  
+/____/_/____/_/ /_/\__,_/\__,_/_/ /_/  /_/  |_/_/ /_/_/ /_/ /_/\___/\__,_/   
+                                                                             </pre>
 			<!-- created with https://patorjk.com/software/taag (font: Slant) -->
-			<h1 id="sub-title">Coding, photography, 3D-art and personal projects!</h1>
+			<h1 id="sub-title">Database engines, cloud infrastructure and machine-learning systems.</h1>
 			<p id="toggle-effects" class="hide-noscript">Want some fancy effects? Click <a id="toggle-effects-link">HERE</a> to turn them on.</p>
 		</header>
 		<br>
@@ -96,9 +106,8 @@
 			<ul>
 				<li><a id="home-tab" class="tab-switcher" href="#home">Home</a></li>
 				<li><a id="projects-tab" class="tab-switcher" href="#projects">Projects</a></li>
-				<li><a id="pictures-tab" class="tab-switcher" href="#pictures">Pictures</a></li>
-				<li><a id="blog-tab" class="tab-switcher" href="#blog">Blog</a></li>
-				<li class="no-mobile"><a id="resources-tab" class="tab-switcher" href="#resources">Resources</a></li>
+				<li><a id="experience-tab" class="tab-switcher" href="#experience">Experience</a></li>
+				<li class="no-mobile"><a id="stack-tab" class="tab-switcher" href="#stack">Stack</a></li>
 				<li><a id="about-tab" class="tab-switcher" href="#about">About</a></li>
 			</ul>
 		</nav>
@@ -108,12 +117,13 @@
 				<div class="grid-row">
 					<div class="grid-row-box">
 						<h2 id="welcome-title">Welcome visitor!</h2>
-						<p><em>★ Updated on AUGUST 8TH, 2024:</em></p>
+						<p><em>★ Updated on SEPTEMBER 6TH, 2026:</em></p>
 						<br>
-						<p>This is my personal webpage with all my projects, images, news and more! Be sure to take a look around.</p>
+						<p>I'm Zishaan, a Computer Science undergraduate at UTAR in Malaysia. I build things where correctness is hard to fake: storage engines, concurrency, and the systems that keep models and services running.</p>
 						<br>
-						<p>Any questions? You might find them answered on the about page: <a href="#about">ABOUT</a></p>
-						<p>Btw, this website is completely open source! I made a github repository for it: [<a href="https://github.com/Richard-Apps/richardapps-web" target="_blank">link</a>]</p>
+						<p>Currently leading a three-person team on a transactional database engine written in Rust, and researching learned algorithm selection for SAT solvers.</p>
+						<br>
+						<p>Looking for software engineering internships from 2027. More on the <a href="#about">ABOUT</a> page.</p>
 						<br class="no-mobile">
 						<p class="no-mobile">Don't forget to check out the different themes for the website! They are located below this post on the right.</p>
 					</div>
@@ -125,13 +135,12 @@
 								<h2>Latest Updates</h2>
 							</summary>
 							<div id="update-list">
-								<p><em>★ FEBRUARY 10TH, 2026:</em> Some new effects on the title, boxes and theme selectors :). Also made sure information is up-to-date.</p>
-								<p><em>★ NOVEMBER 11TH, 2024:</em> Adding collapsible sections to improve the experience on mobile devices, a lot of other small enhancements and new effects.</p>
-								<p><em>★ AUGUST 8TH, 2024:</em> More themes, a lot of QoL-improvements and a updated welcome post.</p>
-								<p><em>★ JUNE 30TH, 2024:</em> Added Themes! You can switch between them to the right of the update list. 'cherry' is my favorite one :).</p>
-								<p><em>★ JUNE 15TH, 2024:</em> Some important changes! Font-weight reduced to make everything sharper, optimized the background videos for faster loading times and fixed the 404 page. :)</p>
-								<p><em>★ MAY 24TH, 2024:</em> New animations, added another background, improved the about-page and a lot of minor improvements!</p>
-								<p><em>★ MAY 20TH, 2024:</em> Redesigned the main- and about-page. Changed from news-tab to home-tab, now presenting more of a 'hub' design.</p>
+								<p><em>★ SEPTEMBER 2026:</em> Rebuilt this site on a terminal-inspired design.</p>
+								<p><em>★ AUGUST 2026:</em> Started OpenRover, a simulation-first autonomous rover platform in C++20. Finished SmolGPT.</p>
+								<p><em>★ JULY 2026:</em> Shipped the AI GitOps Deployment Platform and the Traffic Sign Detection pipeline.</p>
+								<p><em>★ JUNE 2026:</em> Began my Final Year Project on automated SAT solver selection.</p>
+								<p><em>★ MARCH 2026:</em> Started RustDB — a transactional database engine with a custom storage layer.</p>
+								<p><em>★ 2026:</em> Representing UTAR at Top Coder's Malaysia.</p>
 							</div>
 						</details>
 					</div>
@@ -154,131 +163,198 @@
 			<h3 class="no-mobile">A short list of projects made by me!</h3>
 			<ul id="pr-list">
 				<li>
-					<p class="pr-title">RichardApps-web</p>
-					<p class="pr-desc">The public repository of the website's source code.</p>
-					<p class="pr-info no-mobile">[?] Feel free to report bugs, add features and contribute if you'd like! :)</p>
+					<p class="pr-title">OpenRover</p>
+					<p class="pr-desc">A simulation-first autonomous rover platform. Sensing, localization, planning, control and mission execution sit behind one hardware abstraction layer, so the same algorithms run in simulation and on physical hardware.</p>
+					<p class="pr-info no-mobile">[?] Differential-drive kinematics and rover state management, covered by automated GoogleTest suites and CMake builds.</p>
 					<div class="tag-list">
-						<p class="tag">HTML</p>
-						<p class="tag">CSS</p>
-						<p class="tag">JS</p>
+						<p class="tag">C++20</p>
+						<p class="tag">CMake</p>
+						<p class="tag">ASP.NET</p>
+						<p class="tag">Python</p>
+						<p class="tag">PostgreSQL</p>
+						<p class="tag">Docker</p>
 						<p class="tag open-source">Open-Source</p>
 						<p class="tag active">Ongoing</p>
 					</div>
 					<br>
-					<p><a href="https://github.com/Richard-Apps/richardapps-web" target="_blank">[SOURCE CODE]</a></p>
+					<p><a href="https://github.com/zishaan1911/OpenRover" target="_blank">[SOURCE CODE]</a></p>
 				</li>
 				<li>
-					<p class="pr-title">Firefox-ASCII</p>
-					<p class="pr-desc">A simple userContent.css file that edits the appearance of the new-tab in Firefox by adding an ASCII title, animations, and some other tweaks.</p>
+					<p class="pr-title">RustDB</p>
+					<p class="pr-desc">A transactional, cloud-native database engine written in Rust with a custom storage layer, CLI and client components. Leading a team of three.</p>
+					<p class="pr-info no-mobile">[?] Safe Rust abstractions around unsafe and FFI boundaries, keeping the unsafe surface small and auditable. Concurrency hotspots found through stress testing under contention.</p>
 					<div class="tag-list">
-						<p class="tag">CSS</p>
+						<p class="tag">Rust</p>
+						<p class="tag">C++</p>
+						<p class="tag">Docker</p>
+						<p class="tag">Kubernetes</p>
 						<p class="tag open-source">Open-Source</p>
 						<p class="tag active">Ongoing</p>
 					</div>
 					<br>
-					<p><a href="https://github.com/Richard-Apps/firefox-ascii" target="_blank">[SOURCE CODE]</a></p>
+					<p><a href="https://github.com/zishaan1911/RustDB" target="_blank">[SOURCE CODE]</a></p>
 				</li>
 				<li>
-					<p class="pr-title">NameGEN</p>
-					<p class="pr-desc">Generate random, but good sounding, names for your everyday needs! Simple, yet effective tool if you need a nickname, project name, or anything else!</p>
+					<p class="pr-title">Traffic Sign Detection</p>
+					<p class="pr-desc">A modular C++17 computer-vision pipeline that detects, segments and classifies traffic signs, supporting both classical image processing and deep neural network inference.</p>
+					<p class="pr-info no-mobile">[?] 90.21% accuracy and 0.87 macro-F1 across 12,630 test images and 43 GTSRB classes.</p>
 					<div class="tag-list">
-						<p class="tag">HTML</p>
-						<p class="tag">CSS</p>
-						<p class="tag">JS</p>
+						<p class="tag">C++17</p>
+						<p class="tag">Python</p>
+						<p class="tag">OpenCV</p>
+						<p class="tag">PyTorch</p>
+						<p class="tag">ONNX</p>
+						<p class="tag open-source">Open-Source</p>
 						<p class="tag active">Done</p>
 					</div>
 					<br>
-					<p><a href="https://namegen.richardapps.net" target="_blank">[VISIT PAGE]</a></p>
+					<p><a href="https://github.com/zishaan1911/Traffic-Sign-Detection" target="_blank">[SOURCE CODE]</a></p>
 				</li>
 				<li>
-					<p class="pr-title">Archive</p>
-					<p class="pr-desc">A list of abandoned projects.</p>
+					<p class="pr-title">SmolGPT</p>
+					<p class="pr-desc">A 51.1M-parameter decoder-only transformer, written and trained from scratch: causal attention, MLP blocks, mixed-precision training, checkpointing and auto-resume.</p>
+					<p class="pr-info no-mobile">[?] Reached 1.2 validation loss at epoch 5. Custom tokenizing and training pipeline sized to fit a single Google T4 GPU.</p>
+					<div class="tag-list">
+						<p class="tag">Python</p>
+						<p class="tag">PyTorch</p>
+						<p class="tag">CUDA</p>
+						<p class="tag">Transformers</p>
+						<p class="tag open-source">Open-Source</p>
+						<p class="tag active">Done</p>
+					</div>
+					<br>
+					<p><a href="https://github.com/zishaan1911/SmolGPT" target="_blank">[SOURCE CODE]</a> <a href="https://huggingface.co/zishaan1911" target="_blank">[HUGGING FACE]</a></p>
+				</li>
+				<li>
+					<p class="pr-title">AI GitOps Deployment Platform</p>
+					<p class="pr-desc">An open-source Go platform that automates build-test-deploy workflows for Kubernetes microservices, including canary deployments and automatic rollback on failure.</p>
+					<p class="pr-info no-mobile">[?] Parallel CI jobs, Docker layer caching, autoscaling self-hosted runners and GitOps reconciliation.</p>
+					<div class="tag-list">
+						<p class="tag">Go</p>
+						<p class="tag">Kubernetes</p>
+						<p class="tag">ArgoCD</p>
+						<p class="tag">Terraform</p>
+						<p class="tag open-source">Open-Source</p>
+						<p class="tag active">Done</p>
+					</div>
+					<br>
+					<p><a href="https://github.com/zishaan1911/AI-Powered-GitOps-Deployment-Platform" target="_blank">[SOURCE CODE]</a></p>
+				</li>
+				<li>
+					<p class="pr-title">Certifications</p>
+					<p class="pr-desc">Courses and certifications from Google DeepMind, Anthropic, the Linux Foundation, AMD, AWS, Oracle and others.</p>
 					<br>
 					<p><a href="archive.html">[VISIT PAGE]</a></p>
 				</li>
 			</ul>
+
+			<br>
+			<h2>EVERYTHING ELSE</h2>
+			<h3 id="repo-meta">Loading repositories…</h3>
+			<p class="no-mobile">Pulled from GitHub automatically. Grouped by what it is, newest first within each group.</p>
+			<br>
+			<!-- Populated from src/data/repos.json by src/js/modules/live.js.
+			     That file is refreshed by .github/workflows/sync.yml. -->
+			<ul id="repo-list" class="hide-noscript">
+				<li>
+					<p class="pr-desc">Loading the full repository list…</p>
+				</li>
+			</ul>
+			<p class="show-noscript">The full repository list needs JavaScript. Everything is at <a href="https://github.com/zishaan1911" target="_blank">github.com/zishaan1911</a>.</p>
 		</div>
 
-		<div id="pictures" class="tabs">
-			<h2>PICTURES</h2>
-			<div id="pictures-list">
-				<nav class="hide-noscript">
-					<ul>
-						<li><a class="tab-active pic-coll-tabs" data-id="blender">Blender</a></li>
-						<li><a class="pic-coll-tabs" data-id="photography">Photography</a></li>
-					</ul>
-				</nav>
-				<div id="blender" class="pic-coll">
-					<h3>Here's a collection of photos I made with the open-source software <a href="https://blender.org" target="_blank">Blender</a>! Color-grading was done using <a href="https://www.adobe.com/de/products/photoshop-lightroom-classic.html" target="_blank">Lightroom-Classic</a>!</h3>
-					<div class="row">
-						<img loading="lazy" src="/assets/images/pictures-tab/richardapps-spaceship-testrender-widescreen.jpg" onclick="window.open('https://www.artstation.com/artwork/qe0eo2', '_blank')" alt="A cinematic image of a spaceship flying trough a space-station, created by me with Blender 3D." preload="none">
-						<img loading="lazy" src="/assets/images/pictures-tab/richardapps-cinematic-space-render3.jpg" onclick="window.open('https://www.artstation.com/artwork/rJzJOe', '_blank')" alt="A cinematic image of a spaceship flying above the ground with mountains in the background, created by me with Blender 3D." preload="none">
+		<div id="experience" class="tabs">
+			<h2>EXPERIENCE</h2>
+			<div class="grid">
+				<div class="grid-row">
+					<div class="grid-row-box">
+						<h2>Software Engineer Intern</h2>
+						<p><em>APP Timber</em></p>
+						<br>
+						<p>Spearheaded the full-stack modernization of a legacy in-house Learning Management System, from technical audit and architecture redesign through build, QA and deployment.</p>
 					</div>
-					<div class="row">
-						<img loading="lazy" src="/assets/images/pictures-tab/richardapps-default-cube-final-widescreen.jpg" onclick="window.open('https://www.artstation.com/artwork/491knk', '_blank')" alt="A destroyed default-cube flying over an ocean, created by me with Blender 3D." preload="none">
-						<img loading="lazy" src="/assets/images/pictures-tab/richardapps-hms-victory-10.jpg" onclick="window.open('https://www.artstation.com/artwork/49n2Lk', '_blank')" alt="A cinematic image of a 3D-modeled ship inspired by the HMS Victory, created by me with Blender 3D." preload="none">
+					<div class="grid-row-box">
+						<h2>Instructor</h2>
+						<p><em>UTAR Maker's Club — 2026 to present</em></p>
+						<br>
+						<p>Teach programming, AI, Arduino and 3D modeling to 15+ members, including students from non-technical backgrounds.</p>
 					</div>
 				</div>
-				<div id="photography" class="pic-coll">
-					<h3>Here are some images I took in the USA!</h3>
-					<p class="no-mobile"><em>Hover over them to view more information!</em></p>
-					<div class="row row-photography">
-						<div class="img-container">
-							<img src="/assets/images/pictures-tab/P1020060.jpg" loading="lazy" alt="A monochrome picture of the Golden-Gate-Bridge.">
-							<div class="img-desc"><p>The famous Golden-Gate-Bridge! Was a bit cloudy that day, but that probably made it even better!</p></div>
-						</div>
-						<div class="img-container">
-							<img src="/assets/images/pictures-tab/P1020722.jpg" loading="lazy" alt="A close-up picture of a chipmunk.">
-							<div class="img-desc"><p>A chipmunk! We found them in a lot of different places. They were really friendly, weren't even scared of us, thus making photographing them pretty easy!</p></div>
-						</div>
-						<div class="img-container">
-							<img src="/assets/images/pictures-tab/P1020951.jpg" loading="lazy" alt="A minimalistic picture of a helicopter.">
-							<div class="img-desc"><p>Nothing much to say here, but sometimes even the simple, minimalistic photos turn out quite cool!</p></div>
-						</div>
-						<div class="img-container">
-							<img src="/assets/images/pictures-tab/P1020095.jpg" loading="lazy" alt="A picture of a bird in cloudy, dark weather.">
-							<div class="img-desc"><p>We found this cool-looking bird! Fits well with the cloudy weather and the black stone, monochrome from nature!</p></div>
-						</div>
+				<div class="grid-row">
+					<div class="grid-row-box">
+						<h2>Freelance Web Developer</h2>
+						<p><em>Independent — 2025 to present</em></p>
+						<br>
+						<p>Built and maintained websites and internal tools for 3 small businesses.</p>
+						<p>Built a battery-tracking tool for an e-bike rental company, cutting battery logging time by 70%.</p>
 					</div>
-					<p>All these were taken with a Panasonic Lumix DMC-TZ71, a surprisingly good travel camera for a low price.</p>
-					<br>
+					<div class="grid-row-box">
+						<h2>Education</h2>
+						<p><em>Universiti Tunku Abdul Rahman — graduating Oct 2027</em></p>
+						<br>
+						<p>BSc (Hons) Computer Science, Perak, Malaysia.</p>
+						<p class="no-mobile">Coursework: Software Engineering, Data Structures &amp; Algorithms, Object-Oriented Programming, AI Techniques, Database Technology, Operating Systems, Cloud Computing, Algorithm Analysis.</p>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-row-box">
+						<h2>Research</h2>
+						<p><em>Final Year Project — June 2026 to present</em></p>
+						<br>
+						<p>A Hybrid Learning Framework for Automated SAT Solver Selection.</p>
+						<p>Investigating deep-learning-assisted algorithm selection for combinatorial search, integrating GNN-based SAT instance representations with established CDCL solver portfolios.</p>
+					</div>
+					<div class="grid-row-box">
+						<h2>Achievements</h2>
+						<p>-&gt; Top 4% globally on LeetCode</p>
+						<p>-&gt; Ranked #71 on GitHub in Malaysia</p>
+						<p>-&gt; 700+ open-source contributions</p>
+						<p>-&gt; Representing UTAR at Top Coder's Malaysia 2026</p>
+					</div>
 				</div>
 			</div>
-			<p>Click on one of the pictures to see information about it, or visit my <a href="https://www.artstation.com/richardapps" target="_blank" title="Open my ArtStation profile.">ArtStation</a> profile. I'm also on <a href="https://instagram.com/luqiedesign" target="_blank">Instagram</a>!</p>
 		</div>
 
-		<div id="resources" class="tabs">
-			<h2>Resources</h2>
-			<p>Here are some good websites and useful resources I use regularly:</p>
+		<div id="stack" class="tabs">
+			<h2>Stack</h2>
+			<p>The tools and technologies I work with regularly:</p>
 			<br>
 			<div class="grid">
 				<div class="grid-row">
 					<div class="grid-row-box">
-						<p>- development -</p>
-						<p>-> vercel [<a href="https://www.vercel.com" target="_blank">link</a>] <em>A really good web-hosting platform that offers many features for free! I use it in almost all my projects.</em></p>
-						<p>-> MDN-Docs [<a href="https://developer.mozilla.org/en-US/" target="_blank">link</a>] <em>My go-to platform if I have any problems with HTML/CSS/JS, or for exploring all the posibilities!</em></p>
-						<p>-> fontshare [<a href="https://www.fontshare.com/" target="_blank">link</a>] <em>Fonts for your website, similar to google-fonts. The library is a bit smaller, but with the same functionality and without trackers!</em></p>
+						<p>- languages -</p>
+						<p>-&gt; C++ <em>Systems work, computer vision, the rover platform.</em></p>
+						<p>-&gt; Rust <em>RustDB's storage engine. Safe abstractions over unsafe boundaries.</em></p>
+						<p>-&gt; Python <em>Machine learning, tooling, data pipelines.</em></p>
+						<p>-&gt; Go <em>The GitOps deployment platform.</em></p>
+						<p>-&gt; C#, SQL, JavaScript</p>
 					</div>
 				</div>
 				<div class="grid-row">
 					<div class="grid-row-box">
-						<p>- graphics -</p>
-						<p>-> photopea [<a href="https://www.photopea.com" target="_blank">link</a>] <em>A good browser-based image editor for quick edits!</em></p>
-						<p>-> postimages [<a href="https://postimages.org" target="_blank">link</a>] <em>Best service for hosting your images, without compressing them!</em></p>
-						<p>-> caesium-ic [<a href="https://github.com/Lymphatus/caesium-image-compressor" target="_blank">link</a>] <em>Desktop software to optimize your images to make your page load faster.</em></p>
-						<p>-> raw therapee [<a href="https://www.rawtherapee.com/" target="_blank">link</a>] <em>A free Lightroom alternative for high quality color grading.</em></p>
+						<p>- systems &amp; cloud -</p>
+						<p>-&gt; Linux <em>Daily driver and deployment target.</em></p>
+						<p>-&gt; Docker / Kubernetes <em>Containerized deployment and orchestration.</em></p>
+						<p>-&gt; Terraform / ArgoCD <em>Infrastructure as code and GitOps reconciliation.</em></p>
+						<p>-&gt; AWS, GitHub Actions, CodeQL</p>
+					</div>
+					<div class="grid-row-box">
+						<p>- machine learning -</p>
+						<p>-&gt; PyTorch <em>SmolGPT and the traffic sign classifier.</em></p>
+						<p>-&gt; ONNX <em>Model export and cross-runtime inference.</em></p>
+						<p>-&gt; OpenCV <em>Classical image processing.</em></p>
+						<p>-&gt; NumPy, Pandas</p>
 					</div>
 				</div>
 				<div class="grid-row">
 					<div class="grid-row-box">
-						<p>- inspiration for web-design -</p>
-						<p>-> awwwards [<a href="https://www.awwwards.com/" target="_blank">link</a>] <em>Find websites with unique and outstanding designs.</em></p>
-						<p>-> brutalistwebsites [<a href="https://brutalistwebsites.com/" target="_blank">link</a>] <em>A list of websites with extreme designs.</em></p>
-						<p>-> three js [<a href="https://threejs.org/" target="_blank">link</a>] <em>A library for advanced 3D-websites, also features a lot of good sites.</em></p>
+						<p>- data &amp; practice -</p>
+						<p>-&gt; PostgreSQL, MySQL, SQLite</p>
+						<p>-&gt; Data structures &amp; algorithms, OOP, REST APIs</p>
+						<p>-&gt; GoogleTest, PyTest <em>Deterministic fixtures and CI validation.</em></p>
 						<br>
-						<p>>>> Some of my personal favorites:</p>
-						<!-- TODO: ADD HOVER PREVIEWS HERE-->
-						<p><a href="https://loox.app/lost-in-space" target="_blank">lost-in-space</a>, <a href="https://argus.studiofreight.com/" target="_blank">argus-labs</a>, <a href="https://portal.thenifty.com/" target="_blank">thenifty-portal</a>, <a href="https://www.utsubo.com/" target="_blank">utsubo</a>, <a href="https://hexya-online.com/" target="_blank">hexya-online</a>, <a href="https://jacobleech.com/" target="_blank">jacobleech</a></p>
+						<p>&gt;&gt;&gt; Find my code here:</p>
+						<p><a href="https://github.com/zishaan1911" target="_blank">github</a>, <a href="https://leetcode.com/u/iamzishaan/" target="_blank">leetcode</a>, <a href="https://huggingface.co/zishaan1911" target="_blank">hugging face</a></p>
 					</div>
 				</div>
 			</div>
@@ -295,42 +371,43 @@
 				<div class="grid-row">
 					<div class="grid-row-box">
 						<h2>About me</h2>
-						<p>Hi! Firstly, thank you for visiting my website! Glad to have you here.</p>
-						<p>As to me, my name is Richard. <em>(Crazy, right?)</em> I'm really interested in everything computer related!</p>
-						<p>I've done some coding, 3D-art, game-development - even digital drawing!</p>
-						<p><em>I'm no real expert in any of these, I just do them as a hobby.</em></p>
+						<p>Hi, and thanks for visiting. My name is Zishaan.</p>
+						<p>I'm a Computer Science undergraduate at UTAR in Malaysia, drawn to the parts of software where correctness is hard to fake — storage engines, concurrency, and the systems that keep models and services running.</p>
+						<p>Most of what I build starts as a question I can't answer by reading. What does a B-tree actually do when a page fills up? What breaks first when a transformer runs out of memory on a single GPU?</p>
 					</div>
 					<div class="grid-row-box">
-						<h2>Skills</h2>
-						<p>Some things I learned during my journey:</p>
-						<p>-> Blender <em class="no-mobile">I use it to create some cool 3D worlds!</em></p>
-						<p>-> HTML/CSS/JS <em class="no-mobile">Obviously used to create this site.</em></p>
-						<p>-> GD-Script <em class="no-mobile">The language of Godot! Used for some light game-development.</em></p>
-						<p>-> Python <em class="no-mobile">Useful for a lot of projects. Still in the process of learning it, though.</em></p>
+						<h2>What I'm doing now</h2>
+						<p>-&gt; Leading a three-person team on <a href="https://github.com/zishaan1911/RustDB" target="_blank">RustDB</a></p>
+						<p>-&gt; Building <a href="https://github.com/zishaan1911/OpenRover" target="_blank">OpenRover</a>, a rover autonomy platform</p>
+						<p>-&gt; Researching SAT solver selection for my Final Year Project</p>
+						<p>-&gt; Teaching at the UTAR Maker's Club</p>
+						<br>
+						<p><em>Looking for software engineering internships from 2027.</em></p>
 					</div>
 				</div>
 				<div class="grid-row">
 					<div class="grid-row-box">
-						<h2>Pseudonym</h2>
-						<p>Since I had only a phone when starting programming / content creation, I made apps on it! I decided to keep the name, since it's more or less unique - even though I don't do mobile development anymore.</p>
+						<h2>Résumé</h2>
+						<p>Available on request — drop me an email.</p>
+						<p><a href="mailto:iamzishaan@gmail.com">iamzishaan@gmail.com</a></p>
 					</div>
 					<div class="grid-row-box">
-						<h2>Site Goals</h2>
-						<p>Why did I made this site you may ask?</p>
-						<p>It's just nice to have a personal space where I can host and show whatever I want, while having full control over it.</p>
+						<h2>Site Credits</h2>
+						<p>This design is forked from <a href="https://github.com/Richard-Apps/richardapps-web" target="_blank">richardapps-web</a> by Richard-Apps, licensed under GPLv3.</p>
+						<p>Source for this fork: [<a href="https://github.com/zishaan1911/my-portfolio" target="_blank">link</a>]</p>
 					</div>
 					<div class="grid-row-box">
 						<h2>Social Media</h2>
 						<!-- Don't forget to add the fa-fw class for fixed-width -->
-						<p class="contact-link"><i class="fa-brands fa-instagram fa-fw"></i><a href="https://instagram.com/luqiedesign" target="_blank">Instagram</a></p>
-						<p class="contact-link"><i class="fa-brands fa-github fa-fw"></i><a href="https://github.com/richard-apps" target="_blank">GitHub</a></p>
-						<p class="contact-link"><i class="fa-brands fa-artstation fa-fw"></i><a href="https://www.artstation.com/richardapps" target="_blank">ArtStation</a></p>
-						<p class="contact-link"><i class="fa-solid fa-mug-hot fa-fw"></i><a href="https://ko-fi.com/richardapps" target="_blank">Ko-Fi</a></p>
+						<p class="contact-link"><i class="fa-brands fa-github fa-fw"></i><a href="https://github.com/zishaan1911" target="_blank">GitHub</a></p>
+						<p class="contact-link"><i class="fa-brands fa-linkedin fa-fw"></i><a href="https://linkedin.com/in/zishaan-ahmed" target="_blank">LinkedIn</a></p>
+						<p class="contact-link"><i class="fa-solid fa-code fa-fw"></i><a href="https://leetcode.com/u/iamzishaan/" target="_blank">LeetCode</a></p>
+						<p class="contact-link"><i class="fa-solid fa-robot fa-fw"></i><a href="https://huggingface.co/zishaan1911" target="_blank">Hugging Face</a></p>
 					</div>
 					<div class="grid-row-box">
 						<h2>Contact</h2>
-						<p>Questions, wishes, inquiries, problems, and everything else can go to:</p>
-						<p><a href="mailto:support@richardapps.net" target="_blank">support@richardapps.net</a></p>
+						<p>Questions, opportunities, or anything else can go to:</p>
+						<p><a href="mailto:iamzishaan@gmail.com" target="_blank">iamzishaan@gmail.com</a></p>
 					</div>
 				</div>
 			</div>

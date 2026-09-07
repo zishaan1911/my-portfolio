@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /src/example/
-Disallow: /cdn-cgi/
+Allow: /
+
+Sitemap: https://zishaan1911.github.io/sitemap.xml
