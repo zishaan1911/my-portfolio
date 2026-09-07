@@ -64,7 +64,7 @@ export function changeTheme(theme, save = true) {
 
 	// special cases
 	const rainVideo = document.getElementById('rain-vid');
-	rainVideo.style.display = 'none';
+	if (rainVideo) rainVideo.style.display = 'none';
 
 	if (document.getElementById('snow-container')) {
 		document.getElementById('snow-container').innerHTML = ''; // remove created snowflake elements
@@ -72,7 +72,7 @@ export function changeTheme(theme, save = true) {
 
 	switch (theme) {
 		case 'rainy':
-			rainVideo.style.display = 'block';
+			if (rainVideo) rainVideo.style.display = 'block';
 			break;
 		case 'winter':
 			snowAnimation();
@@ -95,9 +95,10 @@ export function changeTheme(theme, save = true) {
 
 export function addThemeList() {
 	const THEME_LIST = document.getElementById('theme-list');
+	if (!THEME_LIST) return;
 	THEME_LIST.innerHTML = '';
 
-	if (THEME_LIST) {
+	{
 		Object.keys(THEMES).forEach((theme) => {
 			const link = document.createElement('a');
 			link.href = '#';
