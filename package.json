@@ -1,0 +1,14 @@
+{
+  "name": "zishaan-site",
+  "private": true,
+  "type": "module",
+  "description": "Personal webpage. Static site plus a sync script that pulls live GitHub data.",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "sync": "node scripts/sync.mjs",
+    "test": "node scripts/guard.test.mjs && node scripts/sync.test.mjs",
+    "test:guard": "node scripts/guard.test.mjs",
+    "test:sync": "node scripts/sync.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
