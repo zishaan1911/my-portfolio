@@ -1,14 +1,68 @@
 {
-  "generatedAt": "2026-09-06T07:51:51.033Z",
+  "generatedAt": "2026-09-07T17:05:54.508Z",
   "user": "zishaan1911",
   "count": 24,
   "totalStars": 48,
   "repos": [
     {
+      "name": "my-portfolio",
+      "url": "https://github.com/zishaan1911/my-portfolio",
+      "homepage": "https://zishaan1911.github.io/my-portfolio/",
+      "description": "Personal Portfolio",
+      "summary": "Personal Portfolio",
+      "summarySource": "github",
+      "language": null,
+      "stars": 2,
+      "forks": 0,
+      "topics": [
+        "portfolio-website"
+      ],
+      "archived": false,
+      "pushedAt": "2026-09-07T16:40:38Z",
+      "createdAt": "2026-05-03T05:45:07Z",
+      "readmeHash": "f38cf63e20c9f005"
+    },
+    {
+      "name": "Helmsman",
+      "url": "https://github.com/zishaan1911/Helmsman",
+      "homepage": "https://zishaan1911.github.io/Helmsman/",
+      "description": "AI-powered GitOps Deployment Platform",
+      "summary": "AI-powered GitOps Deployment Platform",
+      "summarySource": "github",
+      "language": "Go",
+      "stars": 2,
+      "forks": 0,
+      "topics": [
+        "ai",
+        "ci-cd",
+        "gitops"
+      ],
+      "archived": false,
+      "pushedAt": "2026-09-07T12:16:12Z",
+      "createdAt": "2026-07-18T13:07:50Z",
+      "readmeHash": "d0f29628ba39339c"
+    },
+    {
+      "name": "LeetCode-Solutions",
+      "url": "https://github.com/zishaan1911/LeetCode-Solutions",
+      "homepage": null,
+      "description": null,
+      "summary": null,
+      "summarySource": "github",
+      "language": "C++",
+      "stars": 1,
+      "forks": 0,
+      "topics": [],
+      "archived": false,
+      "pushedAt": "2026-09-06T09:17:20Z",
+      "createdAt": "2026-08-04T06:04:15Z",
+      "readmeHash": "e3b0c44298fc1c14"
+    },
+    {
       "name": "GASX",
       "url": "https://github.com/zishaan1911/GASX",
       "homepage": null,
-      "description": "MUBA Blockchain Hackathon 2026 Entry",
+      "description": "MUBA Blockchain Hackathon 2026 Finalist",
       "summary": "MUBA Blockchain Hackathon 2026 Entry",
       "summarySource": "github",
       "language": "TypeScript",
@@ -22,7 +76,7 @@
       "archived": false,
       "pushedAt": "2026-09-05T15:03:05Z",
       "createdAt": "2026-08-27T15:03:38Z",
-      "readmeHash": null
+      "readmeHash": "99e2e6b24667fcf9"
     },
     {
       "name": "Blackhole-Simulator",
@@ -38,23 +92,7 @@
       "archived": false,
       "pushedAt": "2026-09-02T21:02:28Z",
       "createdAt": "2026-09-02T20:38:51Z",
-      "readmeHash": null
-    },
-    {
-      "name": "LeetCode-Solutions",
-      "url": "https://github.com/zishaan1911/LeetCode-Solutions",
-      "homepage": null,
-      "description": null,
-      "summary": null,
-      "summarySource": "github",
-      "language": "C++",
-      "stars": 1,
-      "forks": 0,
-      "topics": [],
-      "archived": false,
-      "pushedAt": "2026-09-01T09:35:48Z",
-      "createdAt": "2026-08-04T06:04:15Z",
-      "readmeHash": null
+      "readmeHash": "c22e829ac9868750"
     },
     {
       "name": "SmolGPT",
@@ -70,7 +108,7 @@
       "archived": false,
       "pushedAt": "2026-08-27T16:12:50Z",
       "createdAt": "2026-07-23T12:21:25Z",
-      "readmeHash": null
+      "readmeHash": "c82784f46bc95f24"
     },
     {
       "name": "UCCD2303-Database-Technology-Assignment",
@@ -86,7 +124,7 @@
       "archived": false,
       "pushedAt": "2026-08-27T04:05:17Z",
       "createdAt": "2026-07-08T04:40:12Z",
-      "readmeHash": null
+      "readmeHash": "270d6339c3971ac1"
     },
     {
       "name": "OpenRover",
@@ -106,7 +144,7 @@
       "archived": false,
       "pushedAt": "2026-08-23T13:33:08Z",
       "createdAt": "2026-08-22T09:09:58Z",
-      "readmeHash": null
+      "readmeHash": "86784be0e132eeb3"
     },
     {
       "name": "GreenNova",
@@ -122,23 +160,7 @@
       "archived": false,
       "pushedAt": "2026-08-23T09:41:15Z",
       "createdAt": "2026-08-18T06:20:40Z",
-      "readmeHash": null
-    },
-    {
-      "name": "my-portfolio",
-      "url": "https://github.com/zishaan1911/my-portfolio",
-      "homepage": null,
-      "description": null,
-      "summary": null,
-      "summarySource": "github",
-      "language": "HTML",
-      "stars": 2,
-      "forks": 0,
-      "topics": [],
-      "archived": false,
-      "pushedAt": "2026-08-18T08:33:26Z",
-      "createdAt": "2026-05-03T05:45:07Z",
-      "readmeHash": null
+      "readmeHash": "a285e9029f89dfd6"
     },
     {
       "name": "MnA-Jet-Signal",
@@ -154,23 +176,7 @@
       "archived": false,
       "pushedAt": "2026-08-17T05:03:13Z",
       "createdAt": "2026-08-17T04:58:07Z",
-      "readmeHash": null
-    },
-    {
-      "name": "AI-Powered-GitOps-Deployment-Platform",
-      "url": "https://github.com/zishaan1911/AI-Powered-GitOps-Deployment-Platform",
-      "homepage": null,
-      "description": null,
-      "summary": null,
-      "summarySource": "github",
-      "language": "Go",
-      "stars": 2,
-      "forks": 0,
-      "topics": [],
-      "archived": false,
-      "pushedAt": "2026-08-01T09:37:45Z",
-      "createdAt": "2026-07-18T13:07:50Z",
-      "readmeHash": null
+      "readmeHash": "020730f397416426"
     },
     {
       "name": "Traffic-Sign-Detection",
@@ -186,7 +192,7 @@
       "archived": false,
       "pushedAt": "2026-07-21T06:44:17Z",
       "createdAt": "2026-07-21T06:38:51Z",
-      "readmeHash": null
+      "readmeHash": "595c6129df2964ff"
     },
     {
       "name": "UCCC2513-Mini-Project",
@@ -202,7 +208,7 @@
       "archived": false,
       "pushedAt": "2026-07-20T09:13:46Z",
       "createdAt": "2026-06-29T16:36:27Z",
-      "readmeHash": null
+      "readmeHash": "6a701d2d1aa6a201"
     },
     {
       "name": "pitwall",
@@ -218,7 +224,7 @@
       "archived": false,
       "pushedAt": "2026-06-27T13:16:05Z",
       "createdAt": "2026-06-27T13:02:43Z",
-      "readmeHash": null
+      "readmeHash": "389b4e13dba8fead"
     },
     {
       "name": "cppnum",
@@ -234,7 +240,7 @@
       "archived": false,
       "pushedAt": "2026-06-25T11:53:40Z",
       "createdAt": "2026-06-25T11:53:39Z",
-      "readmeHash": null
+      "readmeHash": "bbec27387529a380"
     },
     {
       "name": "DL-SP500",
@@ -250,7 +256,7 @@
       "archived": false,
       "pushedAt": "2026-06-25T11:32:34Z",
       "createdAt": "2026-06-25T11:32:33Z",
-      "readmeHash": null
+      "readmeHash": "81acc663d782e144"
     },
     {
       "name": "RustDB",
@@ -266,7 +272,7 @@
       "archived": false,
       "pushedAt": "2026-06-12T12:15:51Z",
       "createdAt": "2026-05-23T08:14:18Z",
-      "readmeHash": null
+      "readmeHash": "e3b0c44298fc1c14"
     },
     {
       "name": "Temporal-Graph-Neural-Network-TGNN-for-Causal-Asset-Relationships",
@@ -282,7 +288,7 @@
       "archived": false,
       "pushedAt": "2026-05-08T19:17:18Z",
       "createdAt": "2026-02-21T21:22:24Z",
-      "readmeHash": null
+      "readmeHash": "b41c266b9032181a"
     },
     {
       "name": "klinik",
@@ -298,7 +304,7 @@
       "archived": false,
       "pushedAt": "2026-05-05T14:39:50Z",
       "createdAt": "2026-05-05T14:34:56Z",
-      "readmeHash": null
+      "readmeHash": "0974f6a651278ee0"
     },
     {
       "name": "rps-bot",
@@ -314,7 +320,7 @@
       "archived": false,
       "pushedAt": "2026-05-03T08:54:42Z",
       "createdAt": "2026-05-03T08:54:05Z",
-      "readmeHash": null
+      "readmeHash": "da3762f30fd0b855"
     },
     {
       "name": "taigu-battery-logging",
@@ -330,7 +336,7 @@
       "archived": false,
       "pushedAt": "2026-04-22T22:37:01Z",
       "createdAt": "2026-04-22T18:59:06Z",
-      "readmeHash": null
+      "readmeHash": "f23c42bd8ee8311b"
     },
     {
       "name": "Algorithmic-Options-Hedging-Model",
@@ -346,7 +352,7 @@
       "archived": false,
       "pushedAt": "2026-02-22T20:36:48Z",
       "createdAt": "2026-02-22T20:22:14Z",
-      "readmeHash": null
+      "readmeHash": "8297983efa3aadf5"
     },
     {
       "name": "monte-carlo-engine",
@@ -362,7 +368,7 @@
       "archived": false,
       "pushedAt": "2026-02-22T19:10:10Z",
       "createdAt": "2026-02-22T10:55:36Z",
-      "readmeHash": null
+      "readmeHash": "b041de5a52fcaca3"
     },
     {
       "name": "BlackHole-Simulation",
@@ -378,7 +384,7 @@
       "archived": false,
       "pushedAt": "2026-02-21T22:59:53Z",
       "createdAt": "2026-02-21T21:35:06Z",
-      "readmeHash": null
+      "readmeHash": "b0ceb13ed68d80dd"
     },
     {
       "name": "alpha-decay-detection-system",
@@ -394,7 +400,7 @@
       "archived": false,
       "pushedAt": "2026-02-21T21:33:19Z",
       "createdAt": "2026-02-21T21:09:14Z",
-      "readmeHash": null
+      "readmeHash": "de7041c75a76d742"
     }
   ]
 }
