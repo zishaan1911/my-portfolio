@@ -1,5 +1,5 @@
 export const CONFIG = {
-	defaultTheme: 'ocean',
+	defaultTheme: 'terminal',
 	seasonalTheme: false, // will change the default theme based on the date (unless a theme is already set in local storage)
 
 	// effects
@@ -18,9 +18,15 @@ export const CONFIG = {
 	animationOnTabChange: true, // disabled when effects are disabled
 	writeAnimationOnTabChange: false, // animationOnTabChange must be true | may cause performance issues
 
+	// live data (written by scripts/sync.mjs, refreshed by GitHub Actions)
+	liveData: true,
+
 	// blog
-	blogUrl: 'https://data.richardapps.net/blog.xml', // example: '/src/example/blog.xml'
-	useExample: false,
+	// Points at the local file, NOT the upstream author's data domain.
+	// The blog tab is currently hidden from the nav in index.html; add its
+	// <li> back once src/example/blog.xml has real posts in it.
+	blogUrl: 'src/example/blog.xml',
+	useExample: true,
 	writeAnimationOnPostOpen: false,
 	showEstimatedReadTime: true,
 };

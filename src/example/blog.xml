@@ -1,21 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Blog posts live here.
+
+	This file is intentionally empty: valid XML with zero <post> elements, so
+	blog.js parses it cleanly and renders nothing instead of throwing. The
+	upstream example file has been replaced because its posts belong to the
+	original author.
+
+	To start blogging: add <post> entries below using the structure in the
+	comment, then restore the blog <li> in the nav in index.html.
+
+	<post id="my-first-post">
+		<date>2026-09-06</date>
+		<title>Title goes here</title>
+		<preview>One or two lines shown in the post list.</preview>
+		<content><![CDATA[ <p>HTML body of the post.</p> ]]></content>
+		<tag>rust</tag>
+	</post>
+-->
 <blog>
-    <post id="1">
-        <date>2024-11-19</date>
-        <title>First Blog Post</title>
-        <preview>Short description of blog post</preview>
-        <content>
-            Full content for the first post goes here.
-        </content>
-        <tag>new</tag>
-    </post>
-    <post id="2">
-        <date>2024-11-20</date>
-        <title>Second Blog Post</title>
-        <preview>Another post preview...</preview>
-        <content>
-            Full content for the second post goes here.
-        </content>
-        <tag>tutorial</tag>
-        <tag>css</tag>
-    </post>
 </blog>
