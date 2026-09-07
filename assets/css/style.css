@@ -455,11 +455,15 @@ nav ul li a {
 }
 
 /* PROJECTS TAB */
-#pr-list {
+/* #repo-list is the live GitHub list injected by src/js/modules/live.js.
+   It shares every rule with the hand-written #pr-list. */
+#pr-list,
+#repo-list {
 	padding-left: 0;
 }
 
-#pr-list li {
+#pr-list li,
+#repo-list li {
 	list-style: none;
 	border: solid var(--main-color);
 	border-width: 1px;
@@ -467,16 +471,28 @@ nav ul li a {
 	padding-bottom: 0.5em;
 }
 
-#pr-list li > *:not(:first-child) {
+#pr-list li > *:not(:first-child),
+#repo-list li > *:not(:first-child) {
 	padding: 0 0.5em;
 }
 
-#pr-list li:not(:last-child) {
+#pr-list li:not(:last-child),
+#repo-list li:not(:last-child) {
 	margin-bottom: 1.5em;
 }
 
-#pr-list li a {
+#pr-list li a,
+#repo-list li a {
 	padding: 0.1em 0;
+}
+
+/* The live list is denser than the curated five. */
+#repo-list li {
+	margin-bottom: 0.75em;
+}
+
+#repo-meta {
+	margin-bottom: 1em;
 }
 
 .pr-title {
@@ -763,4 +779,49 @@ nav ul li a {
 	background: rgba(var(--bg-color), 0.4);
 
 	text-decoration: none;
+}
+
+/* Shown only when a subsystem fails to start — see src/js/main.js. */
+#init-error {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0.75em 1em;
+	background: rgb(245, 67, 67);
+	color: black;
+	text-align: center;
+	z-index: 999;
+}
+
+/* Grouped repository list — see src/js/modules/live.js */
+.repo-group > .repo-sublist {
+	list-style: none;
+	padding: 0 0.5em 0.5em;
+	margin: 0.5em 0 0;
+}
+
+.repo-group .repo-sublist li {
+	border: none;
+	border-left: 1px solid var(--main-color-40);
+	background: none;
+	padding: 0 0 0 0.75em;
+	margin-bottom: 1em;
+}
+
+.repo-group .repo-sublist .pr-title {
+	background: none;
+	color: var(--main-color);
+	padding: 0;
+	margin-bottom: 0.15em;
+}
+
+.repo-group .repo-sublist .pr-desc {
+	padding: 0 !important;
+	opacity: 0.8;
+}
+
+.repo-group .repo-sublist .tag-list {
+	padding: 0 !important;
 }
