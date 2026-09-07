@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Terminus';
-	src: url('/assets/fonts/terminus-webfont.woff2') format('woff2');
+	src: url('../fonts/terminus-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -95,7 +95,7 @@ body {
 }
 
 #grunge-overlay {
-	background: url('/assets/images/grunge.jpg');
+	background: url('../images/grunge.jpg');
 	background-size: cover;
 	mix-blend-mode: color-dodge;
 	opacity: var(--grunge-overlay-opacity);
@@ -103,22 +103,22 @@ body {
 
 @keyframes noise {
 	0% {
-		background: url('/assets/images/noise-textures/noisy-texture-200x200-1.png');
+		background: url('../images/noise-textures/noisy-texture-200x200-1.png');
 	}
 	25% {
-		background: url('/assets/images/noise-textures/noisy-texture-200x200-2.png');
+		background: url('../images/noise-textures/noisy-texture-200x200-2.png');
 	}
 	50% {
-		background: url('/assets/images/noise-textures/noisy-texture-200x200-3.png');
+		background: url('../images/noise-textures/noisy-texture-200x200-3.png');
 	}
 	75% {
-		background: url('/assets/images/noise-textures/noisy-texture-200x200-4.png');
+		background: url('../images/noise-textures/noisy-texture-200x200-4.png');
 	}
 }
 
 #noise-overlay {
 	background-blend-mode: multiply;
-	background: url('/assets/images/noise-textures/noisy-texture-200x200-1.png');
+	background: url('../images/noise-textures/noisy-texture-200x200-1.png');
 	filter: contrast(1.5) brightness(0.4) hue-rotate(90deg);
 	opacity: var(--noise-opacity);
 
