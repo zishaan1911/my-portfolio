@@ -1,0 +1,84 @@
+name: Sync live data
+
+# Pulls the repo list and activity feed from GitHub, rewrites descriptions with
+# Groq, and commits the result straight to main.
+#
+# HEADS UP: scheduled workflows are DISABLED BY DEFAULT in forked repositories.
+# After forking, open the Actions tab and enable them, or this will never run
+# and you'll assume it's broken.
+#
+# Requires one repository secret:
+#   GROQ_API_KEY   from https://console.groq.com/keys
+# Without it the job still runs and simply keeps GitHub's own descriptions.
+
+on:
+  schedule:
+    # 03:00 and 15:00 UTC — twice daily is plenty; the script only commits
+    # when something actually changed.
+    - cron: '0 3,15 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Ignore the README cache and regenerate every description'
+        type: boolean
+        default: false
+
+# Never let two runs commit over each other.
+concurrency:
+  group: sync-live-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify the content guard
+        # This is the code that stops the model publishing invented figures.
+        # If it's broken, do not generate anything.
+        run: |
+          node scripts/guard.test.mjs
+          node scripts/sync.test.mjs
+
+      - name: Drop the cache when a full regeneration was requested
+        if: ${{ inputs.force }}
+        run: |
+          node -e "
+            const fs = require('fs');
+            const p = 'src/data/repos.json';
+            if (!fs.existsSync(p)) process.exit(0);
+            const d = JSON.parse(fs.readFileSync(p, 'utf8'));
+            d.repos.forEach(r => { r.readmeHash = null; });
+            fs.writeFileSync(p, JSON.stringify(d, null, 2) + '\n');
+            console.log('cleared ' + d.repos.length + ' cached hashes');
+          "
+
+      - name: Sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_MODEL: openai/gpt-oss-20b
+          GITHUB_USER: zishaan1911
+        run: node scripts/sync.mjs
+
+      - name: Commit if anything moved
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- src/data; then
+            echo "No change."
+            exit 0
+          fi
+
+          git add src/data
+          git commit -m "chore: sync live data [skip ci]"
+          git push
