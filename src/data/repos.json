@@ -1,9 +1,25 @@
 {
-  "generatedAt": "2026-09-24T18:47:46.446Z",
+  "generatedAt": "2026-09-25T08:27:06.506Z",
   "user": "zishaan1911",
   "count": 27,
   "totalStars": 52,
   "repos": [
+    {
+      "name": "hybrid-sat-selector",
+      "url": "https://github.com/zishaan1911/hybrid-sat-selector",
+      "homepage": null,
+      "description": null,
+      "summary": "Hybrid SAT selector fuses handcrafted SATzilla features with graph neural network embeddings to predict solver choice per instance.",
+      "summarySource": "groq",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "topics": [],
+      "archived": false,
+      "pushedAt": "2026-09-25T06:59:24Z",
+      "createdAt": "2026-09-09T07:38:04Z",
+      "readmeHash": "face5ee7532e6a1b"
+    },
     {
       "name": "my-portfolio",
       "url": "https://github.com/zishaan1911/my-portfolio",
@@ -18,7 +34,7 @@
         "portfolio-website"
       ],
       "archived": false,
-      "pushedAt": "2026-09-24T08:03:07Z",
+      "pushedAt": "2026-09-24T18:48:16Z",
       "createdAt": "2026-05-03T05:45:07Z",
       "readmeHash": "f38cf63e20c9f005"
     },
@@ -93,22 +109,6 @@
       "pushedAt": "2026-09-14T13:29:54Z",
       "createdAt": "2026-09-14T13:26:22Z",
       "readmeHash": "5856cefcce0417e5"
-    },
-    {
-      "name": "hybrid-sat-selector",
-      "url": "https://github.com/zishaan1911/hybrid-sat-selector",
-      "homepage": null,
-      "description": null,
-      "summary": "Hybrid SAT solver selector fuses handcrafted SATzilla-style features with GNN embeddings of literal‑clause graphs to classify solver choice and predict runtime.",
-      "summarySource": "groq",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "topics": [],
-      "archived": false,
-      "pushedAt": "2026-09-10T14:54:37Z",
-      "createdAt": "2026-09-09T07:38:04Z",
-      "readmeHash": "ddf140f58d0b81e1"
     },
     {
       "name": "MicroSlop",
