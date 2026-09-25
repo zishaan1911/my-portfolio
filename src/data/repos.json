@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-09-25T08:27:06.506Z",
+  "generatedAt": "2026-09-25T19:05:23.433Z",
   "user": "zishaan1911",
-  "count": 27,
+  "count": 28,
   "totalStars": 52,
   "repos": [
     {
-      "name": "hybrid-sat-selector",
-      "url": "https://github.com/zishaan1911/hybrid-sat-selector",
+      "name": "arc-length-of-xn",
+      "url": "https://github.com/zishaan1911/arc-length-of-xn",
       "homepage": null,
-      "description": null,
-      "summary": "Hybrid SAT selector fuses handcrafted SATzilla features with graph neural network embeddings to predict solver choice per instance.",
-      "summarySource": "groq",
-      "language": "Python",
-      "stars": 1,
+      "description": "How long is the graph of x^n? Logarithmic corner defects in arc length - paper, LaTeX source and numerical verification",
+      "summary": "How long is the graph of x^n? Logarithmic corner defects in arc length - paper, LaTeX source and numerical verification",
+      "summarySource": "github",
+      "language": "TeX",
+      "stars": 0,
       "forks": 0,
       "topics": [],
       "archived": false,
-      "pushedAt": "2026-09-25T06:59:24Z",
-      "createdAt": "2026-09-09T07:38:04Z",
-      "readmeHash": "face5ee7532e6a1b"
+      "pushedAt": "2026-09-25T18:48:27Z",
+      "createdAt": "2026-09-25T16:36:02Z",
+      "readmeHash": "ac6d63c086c4f22d"
     },
     {
       "name": "my-portfolio",
@@ -34,9 +34,25 @@
         "portfolio-website"
       ],
       "archived": false,
-      "pushedAt": "2026-09-24T18:48:16Z",
+      "pushedAt": "2026-09-25T08:27:36Z",
       "createdAt": "2026-05-03T05:45:07Z",
       "readmeHash": "f38cf63e20c9f005"
+    },
+    {
+      "name": "hybrid-sat-selector",
+      "url": "https://github.com/zishaan1911/hybrid-sat-selector",
+      "homepage": null,
+      "description": null,
+      "summary": "Hybrid SAT selector fuses handcrafted SATzilla features with graph neural network embeddings to predict solver choice per instance.",
+      "summarySource": "groq",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "topics": [],
+      "archived": false,
+      "pushedAt": "2026-09-25T06:59:24Z",
+      "createdAt": "2026-09-09T07:38:04Z",
+      "readmeHash": "face5ee7532e6a1b"
     },
     {
       "name": "LeetCode-Solutions",
