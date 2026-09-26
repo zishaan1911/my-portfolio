@@ -122,5 +122,44 @@ check('accepts a grounded update line', upd.ok, upd.reason || '');
 const updBad = validateUpdate('Cut query latency by 60% in the storage engine.', 'commit: tune storage engine');
 check('rejects an invented update figure', !updBad.ok, updBad.reason);
 
+/* ---- numbers written as words (the old guard's known gap) ---- */
+
+const spelled = validateSummary('A database engine in Rust built by a team of twelve engineers.', README);
+check('rejects a spelled-out number not in the source', !spelled.ok, spelled.reason);
+
+const spelledOk = validateSummary('A transactional database engine in Rust, built by a team of three.', README);
+check('accepts a spelled-out number whose digits are in the source', spelledOk.ok, spelledOk.reason || '');
+
+const doubled = validateSummary('A Rust database engine that doubled write throughput over its first version.', README);
+check('rejects "doubled" when the source never says it', !doubled.ok, doubled.reason);
+
+const manyTx = validateSummary('A Rust database engine serving thousands of transactions per second.', README);
+check('rejects "thousands of" when the source never says it', !manyTx.ok, manyTx.reason);
+
+/* ---- embellishment: fine only when the source says it ---- */
+
+const robust = validateSummary('A robust transactional database engine written in Rust.', README);
+check('rejects "robust" absent from the source', !robust.ok, robust.reason);
+
+const robustOk = validateSummary(
+  'A simulator that reports a robustness curve and a robust estimate of miss distance.',
+  'The runner reports a robust estimate of miss distance and a robustness curve.',
+);
+check('accepts "robust" when the source uses it', robustOk.ok, robustOk.reason || '');
+
+/* ---- voice ---- */
+
+for (const [label, text] of [
+  ['"I"', 'I built a transactional database engine in Rust with a custom storage layer.'],
+  ['"our"', 'Our transactional database engine is written in Rust with a custom storage layer.'],
+  ['"we"', 'A Rust database engine where we wrote a custom storage layer from scratch.'],
+]) {
+  const r = validateSummary(text, README);
+  check(`rejects first person ${label}`, !r.ok, r.reason);
+}
+
+const io = validateSummary('A storage engine in Rust with a custom I/O layer and Docker builds.', `${README} Custom I/O layer.`);
+check('does not mistake "I/O" for first person', io.ok, io.reason || '');
+
 console.log(failures ? `\n${failures} failing check(s)` : '\nAll guard checks passed.');
 process.exit(failures ? 1 : 0);

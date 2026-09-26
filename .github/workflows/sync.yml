@@ -1,29 +1,29 @@
 name: Sync live data
 
-# Pulls the repo list and activity feed from GitHub, rewrites descriptions with
-# Groq, and commits the result straight to main.
+# Refreshes the live parts of index.html: the activity feed, the repo list,
+# the contribution heatmap, language stats and the ranking numbers.
+# See scripts/sync.mjs for what it does and why.
 #
-# HEADS UP: scheduled workflows are DISABLED BY DEFAULT in forked repositories.
-# After forking, open the Actions tab and enable them, or this will never run
-# and you'll assume it's broken.
-#
-# Requires one repository secret:
-#   GROQ_API_KEY   from https://console.groq.com/keys
-# Without it the job still runs and simply keeps GitHub's own descriptions.
+# Needs one repository secret, GROQ_API_KEY (https://console.groq.com/keys).
+# Without it everything still syncs; only new descriptions and feed lines
+# aren't written.
 
 on:
   schedule:
-    # 03:00 and 15:00 UTC — twice daily is plenty; the script only commits
-    # when something actually changed.
-    - cron: '0 3,15 * * *'
+    - cron: '17 1,13 * * *' # twice a day; off the hour, when Actions is less busy
+  push:
+    branches: [master]
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - '.github/workflows/sync.yml'
   workflow_dispatch:
     inputs:
       force:
-        description: 'Ignore the README cache and regenerate every description'
+        description: 'Ignore the caches and regenerate every description and feed line'
         type: boolean
         default: false
 
-# Never let two runs commit over each other.
 concurrency:
   group: sync-live-data
   cancel-in-progress: false
@@ -34,6 +34,7 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -41,44 +42,42 @@ jobs:
         with:
           node-version: 22
 
-      - name: Verify the content guard
+      - name: Test the guard and the renderer
         # This is the code that stops the model publishing invented figures.
-        # If it's broken, do not generate anything.
-        run: |
-          node scripts/guard.test.mjs
-          node scripts/sync.test.mjs
-
-      - name: Drop the cache when a full regeneration was requested
-        if: ${{ inputs.force }}
-        run: |
-          node -e "
-            const fs = require('fs');
-            const p = 'src/data/repos.json';
-            if (!fs.existsSync(p)) process.exit(0);
-            const d = JSON.parse(fs.readFileSync(p, 'utf8'));
-            d.repos.forEach(r => { r.readmeHash = null; });
-            fs.writeFileSync(p, JSON.stringify(d, null, 2) + '\n');
-            console.log('cleared ' + d.repos.length + ' cached hashes');
-          "
+        # If it's broken, generate nothing.
+        run: npm test
 
       - name: Sync
+        id: sync
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GROQ_MODEL: openai/gpt-oss-20b
-          GITHUB_USER: zishaan1911
+          SYNC_BUDGET: 30
+          SYNC_FORCE: ${{ inputs.force && 'true' || 'false' }}
         run: node scripts/sync.mjs
 
-      - name: Commit if anything moved
+      - name: Commit if the page changed
+        if: ${{ !cancelled() }}
+        env:
+          MESSAGE: ${{ steps.sync.outputs.message }}
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          if git diff --quiet -- src/data; then
-            echo "No change."
+          if [ -z "$(git status --porcelain -- index.html sitemap.xml data)" ]; then
+            echo "Nothing changed."
             exit 0
           fi
-
-          git add src/data
-          git commit -m "chore: sync live data [skip ci]"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html sitemap.xml data
+          git commit -m "${MESSAGE:-chore(sync): refresh} [skip ci]"
+          git pull --rebase --autostash
           git push
+
+      - name: Fail loudly if the model is unusable
+        # A revoked key or a retired model should be an email, not a feed
+        # that silently stops updating for weeks.
+        if: ${{ steps.sync.outcome == 'failure' }}
+        run: |
+          echo "::error::The sync step failed. See its log and the job summary."
+          exit 1

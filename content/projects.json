@@ -1,0 +1,81 @@
+{
+  "user": "zishaan1911",
+  "siteUrl": "https://zishaan1911.github.io/",
+  "leetcode": "iamzishaan",
+  "hide": [
+    "zishaan1911",
+    "zishaan1911.github.io",
+    "my-portfolio"
+  ],
+  "quiet": [
+    "LeetCode-Solutions"
+  ],
+  "featured": [
+    "Helmsman",
+    "Vector-missile-interceptor",
+    "GASX",
+    "Kerrscope",
+    "SmolGPT",
+    "OpenRover",
+    "arc-length-of-xn",
+    "hybrid-sat-selector"
+  ],
+  "groups": [
+    {
+      "id": "systems",
+      "title": "systems, simulation & graphics",
+      "blurb": "Lower-level work in C++, Rust and GPU code."
+    },
+    {
+      "id": "ml",
+      "title": "machine learning & vision",
+      "blurb": "Models, training pipelines and experiments."
+    },
+    {
+      "id": "quant",
+      "title": "quantitative finance",
+      "blurb": "Pricing, risk and signal research."
+    },
+    {
+      "id": "apps",
+      "title": "tools, apps & client work",
+      "blurb": "Built for a client, a hackathon or my own machine."
+    },
+    {
+      "id": "coursework",
+      "title": "coursework & practice",
+      "blurb": ""
+    }
+  ],
+  "assign": {
+    "RustDB": "systems",
+    "cppnum": "systems",
+    "BlackHole-Simulation": "systems",
+    "MicroSlop": "apps",
+    "Traffic-Sign-Detection": "ml",
+    "monte-carlo-engine": "quant",
+    "Algorithmic-Options-Hedging-Model": "quant",
+    "DL-SP500": "quant",
+    "alpha-decay-detection-system": "quant",
+    "Temporal-Graph-Neural-Network-TGNN-for-Causal-Asset-Relationships": "quant",
+    "MnA-Jet-Signal": "quant",
+    "pitwall": "quant",
+    "GreenNova": "apps",
+    "klinik": "apps",
+    "taigu-battery-logging": "apps",
+    "UCCD2303-Database-Technology-Assignment": "coursework",
+    "UCCC2513-Mini-Project": "coursework",
+    "LeetCode-Solutions": "coursework"
+  },
+  "descriptions": {
+    "Helmsman": "GitOps deployment with an AI risk gate and self-healing rollback.",
+    "Vector-missile-interceptor": "A real-time simulator for autonomous interception, built around a Kalman filter and proportional navigation.",
+    "GASX": "An Ethereum gas futures exchange on Sui, hedged with ETH options on Thetanuts.",
+    "Kerrscope": "A real-time Kerr black hole ray tracer that integrates one geodesic per pixel on the GPU.",
+    "SmolGPT": "A 51.1M-parameter GPT-style transformer, written and trained from scratch.",
+    "OpenRover": "A simulation-first autonomous rover platform in C++20.",
+    "arc-length-of-xn": "A paper on how fast the arc length of y = xⁿ approaches 2, with LaTeX source and a verification script.",
+    "hybrid-sat-selector": "Per-instance SAT solver selection that fuses SATzilla features with GNN embeddings; my Final Year Project.",
+    "LeetCode-Solutions": "C++ solutions to LeetCode problems."
+  }
+}

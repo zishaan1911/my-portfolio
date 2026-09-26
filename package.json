@@ -1,14 +1,12 @@
 {
-  "name": "zishaan-site",
+  "name": "zishaan1911.github.io",
   "private": true,
   "type": "module",
-  "description": "Personal webpage. Static site plus a sync script that pulls live GitHub data.",
+  "description": "Zishaan Ahmed's personal site: hand-written static HTML plus a bot that keeps its live sections current.",
   "scripts": {
-    "serve": "python3 -m http.server 8000",
+    "serve": "python -m http.server 8000",
     "sync": "node scripts/sync.mjs",
-    "test": "node scripts/guard.test.mjs && node scripts/sync.test.mjs",
-    "test:guard": "node scripts/guard.test.mjs",
-    "test:sync": "node scripts/sync.test.mjs"
+    "test": "node scripts/guard.test.mjs && node scripts/render.test.mjs && node scripts/sync.test.mjs"
   },
   "engines": { "node": ">=20" }
 }

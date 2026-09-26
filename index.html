@@ -1,417 +1,645 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="phosphor">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Zishaan Ahmed's personal webpage. Computer Science undergraduate building database engines in Rust, deployment platforms in Go, and transformers from scratch in PyTorch.">
-	<meta name="author" content="Zishaan Ahmed">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zishaan Ahmed — Software &amp; Systems Engineer</title>
+<meta name="description" content="Zishaan Ahmed (zishaan1911) is a software and systems engineer and Computer Science student at UTAR, Malaysia, building simulators, GitOps tooling, machine-learning systems and open-access math research.">
+<meta name="author" content="Zishaan Ahmed">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://zishaan1911.github.io/">
+<meta name="theme-color" content="#050b08">
 
-	<title>Zishaan Ahmed — Software &amp; Systems Engineer</title>
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Zishaan Ahmed">
+<meta property="og:title" content="Zishaan Ahmed — Software &amp; Systems Engineer">
+<meta property="og:description" content="Simulators, GitOps tooling, ML systems and open-access math research. CS at UTAR, Malaysia.">
+<meta property="og:url" content="https://zishaan1911.github.io/">
+<meta property="og:image" content="https://zishaan1911.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zishaan Ahmed, software and systems engineer: terminal-style card">
+<meta property="profile:first_name" content="Zishaan">
+<meta property="profile:last_name" content="Ahmed">
+<meta property="profile:username" content="zishaan1911">
+<meta name="twitter:card" content="summary_large_image">
 
-	<!-- Paths are relative, not root-absolute, so the site works from a
-	     GitHub Pages project path (/repo-name/) as well as from a domain root. -->
-	<link rel="icon" type="image/png" href="assets/images/favicon.png">
-	<link rel="canonical" href="https://zishaan1911.github.io/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-	<script type="module" src="src/js/main.js" defer></script>
+<link rel="preload" href="assets/fonts/jetbrains-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
 
-	<link rel="preload" as="font" href="assets/fonts/terminus-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="assets/js/site.js" defer></script>
 
-	<link rel="stylesheet" href="assets/css/style.css?v=1"> <!-- increase version after significant changes to prevent browsers from using the old cached version (cache busting) -->
-
-	<meta property="og:title" content="Zishaan Ahmed">
-	<meta property="og:description" content="Computer Science undergraduate building database engines, cloud infrastructure and machine-learning systems.">
-	<meta property="og:image" content="">
-	<meta property="og:url" content="https://zishaan1911.github.io/">
-
-	<meta name="keywords" content="Zishaan Ahmed, zishaan1911, software engineer, Rust, C++, databases, Malaysia">
-	<meta name="robots" content="index, follow">
-	<meta name="revisit-after" content="7 days">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-	<style>
-        .no-fouc {
-            visibility: hidden;
-        }
-
-        /* "Zishaan Ahmed" is 77 characters wide in the Slant font, against
-           "RichardApps" at 63, so the fixed desktop size is nudged down to
-           stop it overflowing between 1150px and ~1400px. Kept here rather
-           than in style.css to leave the upstream stylesheet untouched. */
-        #title {
-            font-size: 1.05em;
-        }
-    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://zishaan1911.github.io/#page",
+      "url": "https://zishaan1911.github.io/",
+      "name": "Zishaan Ahmed — Software & Systems Engineer",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://zishaan1911.github.io/#website" },
+      "mainEntity": { "@id": "https://zishaan1911.github.io/#person" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zishaan1911.github.io/#website",
+      "url": "https://zishaan1911.github.io/",
+      "name": "Zishaan Ahmed",
+      "publisher": { "@id": "https://zishaan1911.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://zishaan1911.github.io/#person",
+      "name": "Zishaan Ahmed",
+      "givenName": "Zishaan",
+      "familyName": "Ahmed",
+      "alternateName": "zishaan1911",
+      "url": "https://zishaan1911.github.io/",
+      "image": "https://zishaan1911.github.io/assets/img/zishaan-ahmed.jpg",
+      "email": "mailto:iamzishaan@gmail.com",
+      "jobTitle": "Software Engineer",
+      "description": "Software and systems engineer and Computer Science undergraduate at Universiti Tunku Abdul Rahman (UTAR), Malaysia.",
+      "worksFor": { "@type": "Organization", "name": "APP Timber" },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universiti Tunku Abdul Rahman",
+        "alternateName": "UTAR",
+        "url": "https://www.utar.edu.my/"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": { "@type": "PostalAddress", "addressRegion": "Perak", "addressCountry": "MY" }
+      },
+      "knowsAbout": [
+        "Software engineering", "Systems programming", "C++", "Go", "Python", "Rust",
+        "Kubernetes", "GitOps", "Machine learning", "Transformers", "Kalman filtering",
+        "Computer graphics", "SAT solving", "Asymptotic analysis"
+      ],
+      "award": [
+        "Finalist, MUBA Hackathon 2026 (honourable mention from Sui)",
+        "Finalist, Top Coder's Malaysia 2026"
+      ],
+      "sameAs": [
+        "https://github.com/zishaan1911",
+        "https://www.linkedin.com/in/zishaan-ahmed",
+        "https://leetcode.com/u/iamzishaan/",
+        "https://huggingface.co/zishaan1911"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.22970394",
+      "headline": "How Long is the Graph of xⁿ? Logarithmic corner defects in arc length",
+      "author": { "@id": "https://zishaan1911.github.io/#person" },
+      "datePublished": "2026-09-26",
+      "url": "https://doi.org/10.5281/zenodo.22970394",
+      "identifier": "doi:10.5281/zenodo.22970394",
+      "publisher": { "@type": "Organization", "name": "Zenodo" },
+      "keywords": "arc length, asymptotic expansion, Beta function, Gamma function, Mellin transform, superellipse"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.22763759",
+      "headline": "A Hybrid Learning Framework for Automated SAT Solver Selection",
+      "author": [
+        { "@id": "https://zishaan1911.github.io/#person" },
+        { "@type": "Person", "name": "T. Kwan Lee" }
+      ],
+      "datePublished": "2026-09-15",
+      "url": "https://doi.org/10.5281/zenodo.22763759",
+      "identifier": "doi:10.5281/zenodo.22763759",
+      "publisher": { "@type": "Organization", "name": "Zenodo" },
+      "keywords": "SAT solving, algorithm selection, graph neural networks, SATzilla"
+    }
+  ]
+}
+</script>
 </head>
-<body class="no-fouc">
-	<script>
-		// prevent unstyled content css flash in firefox
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.remove('no-fouc');
-        });
-	</script>
-	<noscript>
-		<h2 id="noscript-warning">You are viewing a limited version of this site because JavaScript is disabled.</h2>
-		<style>
-			.no-fouc {
-				visibility: visible;
-			}
-			.hide-noscript {
-				display: none;
-			}
-			.show-noscript {
-				display: block;
-			}
-			#noscript-warning {
-				color: rgb(245, 67, 67);
-				text-align: center;
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				padding: 1em;
-			}
-		</style>
-	</noscript>
-	<video
-		id="rain-vid"
-		src="assets/videos/rain-bg.mp4"
-		poster="assets/images/rain-bg-static.png"
-		preload="metadata"
-		onloadstart="this.playbackRate = 0.8;"
-		autoplay
-		muted
-		loop
-		playsinline>
-	</video>
-	<img id="grunge-overlay" loading="lazy">
-	<img id="noise-overlay" loading="lazy">
-	<div id="snow-container"></div>
-	<div id="canvas">
-		<header>
-			<pre id="title" class="moving-text"> _____   _      __                         ___    __                       __
-/__  /  (_)____/ /_  ____ _____ _____     /   |  / /_  ____ ___  ___  ____/ /
-  / /  / / ___/ __ \/ __ `/ __ `/ __ \   / /| | / __ \/ __ `__ \/ _ \/ __  / 
- / /__/ (__  ) / / / /_/ / /_/ / / / /  / ___ |/ / / / / / / / /  __/ /_/ /  
-/____/_/____/_/ /_/\__,_/\__,_/_/ /_/  /_/  |_/_/ /_/_/ /_/ /_/\___/\__,_/   
-                                                                             </pre>
-			<!-- created with https://patorjk.com/software/taag (font: Slant) -->
-			<h1 id="sub-title">Database engines, cloud infrastructure and machine-learning systems.</h1>
-			<p id="toggle-effects" class="hide-noscript">Want some fancy effects? Click <a id="toggle-effects-link">HERE</a> to turn them on.</p>
-		</header>
-		<br>
-		<p>Some things you might be interested in:</p>
-		<nav id="nav-tabs">
-			<ul>
-				<li><a id="home-tab" class="tab-switcher" href="#home">Home</a></li>
-				<li><a id="projects-tab" class="tab-switcher" href="#projects">Projects</a></li>
-				<li><a id="experience-tab" class="tab-switcher" href="#experience">Experience</a></li>
-				<li class="no-mobile"><a id="stack-tab" class="tab-switcher" href="#stack">Stack</a></li>
-				<li><a id="about-tab" class="tab-switcher" href="#about">About</a></li>
-			</ul>
-		</nav>
+<body>
+<a class="skip" href="#work">Skip to projects</a>
 
-		<div id="home" class="tabs">
-			<div class="grid">
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<h2 id="welcome-title">Welcome visitor!</h2>
-						<p><em>★ Updated on SEPTEMBER 6TH, 2026:</em></p>
-						<br>
-						<p>I'm Zishaan, a Computer Science undergraduate at UTAR in Malaysia. I build things where correctness is hard to fake: storage engines, concurrency, and the systems that keep models and services running.</p>
-						<br>
-						<p>Currently leading a three-person team on a transactional database engine written in Rust, and researching learned algorithm selection for SAT solvers.</p>
-						<br>
-						<p>Looking for software engineering internships from 2027. More on the <a href="#about">ABOUT</a> page.</p>
-						<br class="no-mobile">
-						<p class="no-mobile">Don't forget to check out the different themes for the website! They are located below this post on the right.</p>
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<details open>
-							<summary>
-								<h2>Latest Updates</h2>
-							</summary>
-							<div id="update-list">
-								<p><em>★ SEPTEMBER 2026:</em> Rebuilt this site on a terminal-inspired design.</p>
-								<p><em>★ AUGUST 2026:</em> Started OpenRover, a simulation-first autonomous rover platform in C++20. Finished SmolGPT.</p>
-								<p><em>★ JULY 2026:</em> Shipped the AI GitOps Deployment Platform and the Traffic Sign Detection pipeline.</p>
-								<p><em>★ JUNE 2026:</em> Began my Final Year Project on automated SAT solver selection.</p>
-								<p><em>★ MARCH 2026:</em> Started RustDB — a transactional database engine with a custom storage layer.</p>
-								<p><em>★ 2026:</em> Representing UTAR at Top Coder's Malaysia.</p>
-							</div>
-						</details>
-					</div>
-					<div class="grid-row-box grid-row-box-shrink hide-noscript">
-						<div id="theme-selector">
-							<details open>
-								<summary>
-									<h2>Themes</h2>
-								</summary>
-								<div id="theme-list"></div>
-							</details>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<div class="term">
+  <div class="titlebar">
+    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="path">zishaan@github.io: ~/portfolio</span>
+    <div class="themes" role="group" aria-label="Colour theme">
+      <button type="button" data-set-theme="phosphor" aria-pressed="true">phosphor</button>
+      <button type="button" data-set-theme="amber" aria-pressed="false">amber</button>
+      <button type="button" data-set-theme="ice" aria-pressed="false">ice</button>
+      <button type="button" data-set-theme="paper" aria-pressed="false">paper</button>
+    </div>
+  </div>
 
-		<div id="projects" class="tabs">
-			<h2>PROJECTS</h2>
-			<h3 class="no-mobile">A short list of projects made by me!</h3>
-			<ul id="pr-list">
-				<li>
-					<p class="pr-title">OpenRover</p>
-					<p class="pr-desc">A simulation-first autonomous rover platform. Sensing, localization, planning, control and mission execution sit behind one hardware abstraction layer, so the same algorithms run in simulation and on physical hardware.</p>
-					<p class="pr-info no-mobile">[?] Differential-drive kinematics and rover state management, covered by automated GoogleTest suites and CMake builds.</p>
-					<div class="tag-list">
-						<p class="tag">C++20</p>
-						<p class="tag">CMake</p>
-						<p class="tag">ASP.NET</p>
-						<p class="tag">Python</p>
-						<p class="tag">PostgreSQL</p>
-						<p class="tag">Docker</p>
-						<p class="tag open-source">Open-Source</p>
-						<p class="tag active">Ongoing</p>
-					</div>
-					<br>
-					<p><a href="https://github.com/zishaan1911/OpenRover" target="_blank">[SOURCE CODE]</a></p>
-				</li>
-				<li>
-					<p class="pr-title">RustDB</p>
-					<p class="pr-desc">A transactional, cloud-native database engine written in Rust with a custom storage layer, CLI and client components. Leading a team of three.</p>
-					<p class="pr-info no-mobile">[?] Safe Rust abstractions around unsafe and FFI boundaries, keeping the unsafe surface small and auditable. Concurrency hotspots found through stress testing under contention.</p>
-					<div class="tag-list">
-						<p class="tag">Rust</p>
-						<p class="tag">C++</p>
-						<p class="tag">Docker</p>
-						<p class="tag">Kubernetes</p>
-						<p class="tag open-source">Open-Source</p>
-						<p class="tag active">Ongoing</p>
-					</div>
-					<br>
-					<p><a href="https://github.com/zishaan1911/RustDB" target="_blank">[SOURCE CODE]</a></p>
-				</li>
-				<li>
-					<p class="pr-title">Traffic Sign Detection</p>
-					<p class="pr-desc">A modular C++17 computer-vision pipeline that detects, segments and classifies traffic signs, supporting both classical image processing and deep neural network inference.</p>
-					<p class="pr-info no-mobile">[?] 90.21% accuracy and 0.87 macro-F1 across 12,630 test images and 43 GTSRB classes.</p>
-					<div class="tag-list">
-						<p class="tag">C++17</p>
-						<p class="tag">Python</p>
-						<p class="tag">OpenCV</p>
-						<p class="tag">PyTorch</p>
-						<p class="tag">ONNX</p>
-						<p class="tag open-source">Open-Source</p>
-						<p class="tag active">Done</p>
-					</div>
-					<br>
-					<p><a href="https://github.com/zishaan1911/Traffic-Sign-Detection" target="_blank">[SOURCE CODE]</a></p>
-				</li>
-				<li>
-					<p class="pr-title">SmolGPT</p>
-					<p class="pr-desc">A 51.1M-parameter decoder-only transformer, written and trained from scratch: causal attention, MLP blocks, mixed-precision training, checkpointing and auto-resume.</p>
-					<p class="pr-info no-mobile">[?] Reached 1.2 validation loss at epoch 5. Custom tokenizing and training pipeline sized to fit a single Google T4 GPU.</p>
-					<div class="tag-list">
-						<p class="tag">Python</p>
-						<p class="tag">PyTorch</p>
-						<p class="tag">CUDA</p>
-						<p class="tag">Transformers</p>
-						<p class="tag open-source">Open-Source</p>
-						<p class="tag active">Done</p>
-					</div>
-					<br>
-					<p><a href="https://github.com/zishaan1911/SmolGPT" target="_blank">[SOURCE CODE]</a> <a href="https://huggingface.co/zishaan1911" target="_blank">[HUGGING FACE]</a></p>
-				</li>
-				<li>
-					<p class="pr-title">AI GitOps Deployment Platform</p>
-					<p class="pr-desc">An open-source Go platform that automates build-test-deploy workflows for Kubernetes microservices, including canary deployments and automatic rollback on failure.</p>
-					<p class="pr-info no-mobile">[?] Parallel CI jobs, Docker layer caching, autoscaling self-hosted runners and GitOps reconciliation.</p>
-					<div class="tag-list">
-						<p class="tag">Go</p>
-						<p class="tag">Kubernetes</p>
-						<p class="tag">ArgoCD</p>
-						<p class="tag">Terraform</p>
-						<p class="tag open-source">Open-Source</p>
-						<p class="tag active">Done</p>
-					</div>
-					<br>
-					<p><a href="https://github.com/zishaan1911/AI-Powered-GitOps-Deployment-Platform" target="_blank">[SOURCE CODE]</a></p>
-				</li>
-				<li>
-					<p class="pr-title">Certifications</p>
-					<p class="pr-desc">Courses and certifications from Google DeepMind, Anthropic, the Linux Foundation, AMD, AWS, Oracle and others.</p>
-					<br>
-					<p><a href="archive.html">[VISIT PAGE]</a></p>
-				</li>
-			</ul>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#home"><kbd>0</kbd>~</a>
+    <a href="#work"><kbd>1</kbd>work</a>
+    <a href="#research"><kbd>2</kbd>research</a>
+    <a href="#experience"><kbd>3</kbd>experience</a>
+    <a href="#log"><kbd>4</kbd>activity</a>
+    <a href="#repos"><kbd>5</kbd>repos</a>
+    <a href="#contact"><kbd>6</kbd>contact</a>
+  </nav>
 
-			<br>
-			<h2>EVERYTHING ELSE</h2>
-			<h3 id="repo-meta">Loading repositories…</h3>
-			<p class="no-mobile">Pulled from GitHub automatically. Grouped by what it is, newest first within each group.</p>
-			<br>
-			<!-- Populated from src/data/repos.json by src/js/modules/live.js.
-			     That file is refreshed by .github/workflows/sync.yml. -->
-			<ul id="repo-list" class="hide-noscript">
-				<li>
-					<p class="pr-desc">Loading the full repository list…</p>
-				</li>
-			</ul>
-			<p class="show-noscript">The full repository list needs JavaScript. Everything is at <a href="https://github.com/zishaan1911" target="_blank">github.com/zishaan1911</a>.</p>
-		</div>
+  <main>
+    <!-- ───────────────────────────── home ───────────────────────────── -->
+    <section id="home" class="hero" aria-labelledby="name">
+      <div class="hero-main">
+        <pre class="banner" aria-hidden="true">███████╗██╗███████╗██╗  ██╗ █████╗  █████╗ ███╗   ██╗
+╚══███╔╝██║██╔════╝██║  ██║██╔══██╗██╔══██╗████╗  ██║
+  ███╔╝ ██║███████╗███████║███████║███████║██╔██╗ ██║
+ ███╔╝  ██║╚════██║██╔══██║██╔══██║██╔══██║██║╚██╗██║
+███████╗██║███████║██║  ██║██║  ██║██║  ██║██║ ╚████║
+╚══════╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+ █████╗ ██╗  ██╗███╗   ███╗███████╗██████╗
+██╔══██╗██║  ██║████╗ ████║██╔════╝██╔══██╗
+███████║███████║██╔████╔██║█████╗  ██║  ██║
+██╔══██║██╔══██║██║╚██╔╝██║██╔══╝  ██║  ██║
+██║  ██║██║  ██║██║ ╚═╝ ██║███████╗██████╔╝
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚═════╝</pre>
+        <h1 id="name">Zishaan Ahmed <span class="role">— software &amp; systems engineer</span></h1>
+        <p class="tagline"><span class="ps1" aria-hidden="true">&gt;</span> <span data-type>I build things where correctness is hard to fake: simulators, deployment systems, ML pipelines, and the occasional theorem.</span><span class="cursor" aria-hidden="true">█</span></p>
+        <p class="cta">
+          <a class="btn" href="https://github.com/zishaan1911" rel="me">github</a>
+          <a class="btn" href="https://www.linkedin.com/in/zishaan-ahmed" rel="me">linkedin</a>
+          <a class="btn" href="mailto:iamzishaan@gmail.com">email</a>
+          <a class="btn" href="#research">research</a>
+        </p>
 
-		<div id="experience" class="tabs">
-			<h2>EXPERIENCE</h2>
-			<div class="grid">
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<h2>Software Engineer Intern</h2>
-						<p><em>APP Timber</em></p>
-						<br>
-						<p>Spearheaded the full-stack modernization of a legacy in-house Learning Management System, from technical audit and architecture redesign through build, QA and deployment.</p>
-					</div>
-					<div class="grid-row-box">
-						<h2>Instructor</h2>
-						<p><em>UTAR Maker's Club — 2026 to present</em></p>
-						<br>
-						<p>Teach programming, AI, Arduino and 3D modeling to 15+ members, including students from non-technical backgrounds.</p>
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<h2>Freelance Web Developer</h2>
-						<p><em>Independent — 2025 to present</em></p>
-						<br>
-						<p>Built and maintained websites and internal tools for 3 small businesses.</p>
-						<p>Built a battery-tracking tool for an e-bike rental company, cutting battery logging time by 70%.</p>
-					</div>
-					<div class="grid-row-box">
-						<h2>Education</h2>
-						<p><em>Universiti Tunku Abdul Rahman — graduating Oct 2027</em></p>
-						<br>
-						<p>BSc (Hons) Computer Science, Perak, Malaysia.</p>
-						<p class="no-mobile">Coursework: Software Engineering, Data Structures &amp; Algorithms, Object-Oriented Programming, AI Techniques, Database Technology, Operating Systems, Cloud Computing, Algorithm Analysis.</p>
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<h2>Research</h2>
-						<p><em>Final Year Project — June 2026 to present</em></p>
-						<br>
-						<p>A Hybrid Learning Framework for Automated SAT Solver Selection.</p>
-						<p>Investigating deep-learning-assisted algorithm selection for combinatorial search, integrating GNN-based SAT instance representations with established CDCL solver portfolios.</p>
-					</div>
-					<div class="grid-row-box">
-						<h2>Achievements</h2>
-						<p>-&gt; Top 4% globally on LeetCode</p>
-						<p>-&gt; Ranked #71 on GitHub in Malaysia</p>
-						<p>-&gt; 700+ open-source contributions</p>
-						<p>-&gt; Representing UTAR at Top Coder's Malaysia 2026</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="shell" id="shell">
+          <div class="shell-out" id="shell-out" aria-live="polite"></div>
+          <form class="shell-line" id="shell-form" autocomplete="off">
+            <label for="shell-in" class="ps1">visitor@zishaan:~$</label>
+            <input id="shell-in" name="cmd" type="text" spellcheck="false" autocapitalize="off" placeholder="try: help" aria-describedby="shell-hint">
+          </form>
+          <p class="shell-hint" id="shell-hint">An actual (tiny) shell. Try <code>help</code>, <code>projects</code>, <code>whoami</code> or <code>theme amber</code>.</p>
+        </div>
+      </div>
 
-		<div id="stack" class="tabs">
-			<h2>Stack</h2>
-			<p>The tools and technologies I work with regularly:</p>
-			<br>
-			<div class="grid">
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<p>- languages -</p>
-						<p>-&gt; C++ <em>Systems work, computer vision, the rover platform.</em></p>
-						<p>-&gt; Rust <em>RustDB's storage engine. Safe abstractions over unsafe boundaries.</em></p>
-						<p>-&gt; Python <em>Machine learning, tooling, data pipelines.</em></p>
-						<p>-&gt; Go <em>The GitOps deployment platform.</em></p>
-						<p>-&gt; C#, SQL, JavaScript</p>
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<p>- systems &amp; cloud -</p>
-						<p>-&gt; Linux <em>Daily driver and deployment target.</em></p>
-						<p>-&gt; Docker / Kubernetes <em>Containerized deployment and orchestration.</em></p>
-						<p>-&gt; Terraform / ArgoCD <em>Infrastructure as code and GitOps reconciliation.</em></p>
-						<p>-&gt; AWS, GitHub Actions, CodeQL</p>
-					</div>
-					<div class="grid-row-box">
-						<p>- machine learning -</p>
-						<p>-&gt; PyTorch <em>SmolGPT and the traffic sign classifier.</em></p>
-						<p>-&gt; ONNX <em>Model export and cross-runtime inference.</em></p>
-						<p>-&gt; OpenCV <em>Classical image processing.</em></p>
-						<p>-&gt; NumPy, Pandas</p>
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<p>- data &amp; practice -</p>
-						<p>-&gt; PostgreSQL, MySQL, SQLite</p>
-						<p>-&gt; Data structures &amp; algorithms, OOP, REST APIs</p>
-						<p>-&gt; GoogleTest, PyTest <em>Deterministic fixtures and CI validation.</em></p>
-						<br>
-						<p>&gt;&gt;&gt; Find my code here:</p>
-						<p><a href="https://github.com/zishaan1911" target="_blank">github</a>, <a href="https://leetcode.com/u/iamzishaan/" target="_blank">leetcode</a>, <a href="https://huggingface.co/zishaan1911" target="_blank">hugging face</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
+      <aside class="fetch" aria-label="At a glance">
+        <figure class="photo">
+          <img src="assets/img/zishaan-ahmed.jpg" width="150" height="150" alt="Zishaan Ahmed">
+        </figure>
+        <div class="fetch-info">
+          <p class="fetch-host"><b>zishaan</b>@<b>utar</b></p>
+          <p class="fetch-rule" aria-hidden="true">──────────────────</p>
+          <dl>
+            <dt>role</dt><dd>Software Engineer Intern @ APP Timber</dd>
+            <dt>also</dt><dd>Full-stack mobile engineer (contract)</dd>
+            <dt>study</dt><dd>BCS (Hons) Computer Science, UTAR ’27</dd>
+            <dt>base</dt><dd>Perak, Malaysia</dd>
+            <dt>langs</dt><dd>C++ · Go · Python · Rust · TypeScript</dd>
+            <dt>github</dt><dd>#<!-- sync:rank -->48<!-- /sync:rank --> in Malaysia · <!-- sync:contrib -->1,388<!-- /sync:contrib --> contributions/yr</dd>
+            <dt>leetcode</dt><dd>top 4% · <!-- sync:lc-solved -->283<!-- /sync:lc-solved --> solved (<!-- sync:lc-hard -->50<!-- /sync:lc-hard --> hard)</dd>
+            <dt>status</dt><dd><span class="dot-live" aria-hidden="true">●</span> open to SWE internships from 2027</dd>
+          </dl>
+          <p class="swatches" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></p>
+        </div>
+      </aside>
+    </section>
 
-		<div id="blog" class="tabs">
-			<h1>Blog</h1>
-			<p class="show-noscript">Sorry, you need to enable JavaScript to view the blog page.</p>
-			<div id="blog-window"></div>
-		</div>
+    <section class="highlights" aria-labelledby="h-highlights">
+      <h2 id="h-highlights" class="h"><span class="ps1" aria-hidden="true">$ cat </span>highlights</h2>
+      <ul class="tiles">
+        <li class="tile">
+          <b class="tile-num">#<!-- sync:rank -->48<!-- /sync:rank --></b>
+          <span class="tile-label">GitHub committer in Malaysia · <a href="https://committers.top/malaysia">committers.top</a></span>
+        </li>
+        <li class="tile">
+          <b class="tile-num"><!-- sync:contrib -->1,388<!-- /sync:contrib --></b>
+          <span class="tile-label">GitHub contributions in the last year</span>
+        </li>
+        <li class="tile">
+          <b class="tile-num">Finalist</b>
+          <span class="tile-label">MUBA Hackathon 2026 · honourable mention from Sui for <a href="#p-gasx">GASX</a></span>
+        </li>
+        <li class="tile">
+          <b class="tile-num">Finalist</b>
+          <span class="tile-label">Top Coder’s Malaysia 2026</span>
+        </li>
+        <li class="tile">
+          <b class="tile-num">Top 4%</b>
+          <span class="tile-label">on <a href="https://leetcode.com/u/iamzishaan/">LeetCode</a> · <!-- sync:lc-solved -->283<!-- /sync:lc-solved --> problems solved</span>
+        </li>
+        <li class="tile">
+          <b class="tile-num">22×</b>
+          <span class="tile-label">certified in software engineering, cloud, DevOps and AI · <a href="#certs">list</a></span>
+        </li>
+      </ul>
 
-		<div id="about" class="tabs">
-			<div class="grid">
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<h2>About me</h2>
-						<p>Hi, and thanks for visiting. My name is Zishaan.</p>
-						<p>I'm a Computer Science undergraduate at UTAR in Malaysia, drawn to the parts of software where correctness is hard to fake — storage engines, concurrency, and the systems that keep models and services running.</p>
-						<p>Most of what I build starts as a question I can't answer by reading. What does a B-tree actually do when a page fills up? What breaks first when a transformer runs out of memory on a single GPU?</p>
-					</div>
-					<div class="grid-row-box">
-						<h2>What I'm doing now</h2>
-						<p>-&gt; Leading a three-person team on <a href="https://github.com/zishaan1911/RustDB" target="_blank">RustDB</a></p>
-						<p>-&gt; Building <a href="https://github.com/zishaan1911/OpenRover" target="_blank">OpenRover</a>, a rover autonomy platform</p>
-						<p>-&gt; Researching SAT solver selection for my Final Year Project</p>
-						<p>-&gt; Teaching at the UTAR Maker's Club</p>
-						<br>
-						<p><em>Looking for software engineering internships from 2027.</em></p>
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="grid-row-box">
-						<h2>Résumé</h2>
-						<p>Available on request — drop me an email.</p>
-						<p><a href="mailto:iamzishaan@gmail.com">iamzishaan@gmail.com</a></p>
-					</div>
-					<div class="grid-row-box">
-						<h2>Site Credits</h2>
-						<p>This design is forked from <a href="https://github.com/Richard-Apps/richardapps-web" target="_blank">richardapps-web</a> by Richard-Apps, licensed under GPLv3.</p>
-						<p>Source for this fork: [<a href="https://github.com/zishaan1911/my-portfolio" target="_blank">link</a>]</p>
-					</div>
-					<div class="grid-row-box">
-						<h2>Social Media</h2>
-						<!-- Don't forget to add the fa-fw class for fixed-width -->
-						<p class="contact-link"><i class="fa-brands fa-github fa-fw"></i><a href="https://github.com/zishaan1911" target="_blank">GitHub</a></p>
-						<p class="contact-link"><i class="fa-brands fa-linkedin fa-fw"></i><a href="https://linkedin.com/in/zishaan-ahmed" target="_blank">LinkedIn</a></p>
-						<p class="contact-link"><i class="fa-solid fa-code fa-fw"></i><a href="https://leetcode.com/u/iamzishaan/" target="_blank">LeetCode</a></p>
-						<p class="contact-link"><i class="fa-solid fa-robot fa-fw"></i><a href="https://huggingface.co/zishaan1911" target="_blank">Hugging Face</a></p>
-					</div>
-					<div class="grid-row-box">
-						<h2>Contact</h2>
-						<p>Questions, opportunities, or anything else can go to:</p>
-						<p><a href="mailto:iamzishaan@gmail.com" target="_blank">iamzishaan@gmail.com</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      <figure class="heat">
+        <figcaption class="dim"><span class="ps1" aria-hidden="true">$ git log --since=1.year | heatmap</span></figcaption>
+        <!-- sync:heatmap --><pre class="heatmap" role="img" aria-label="Contribution heatmap: 1,388 contributions over 53 weeks, active on 138 days.">    Sep Oct     Nov       Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     Aug       Sep
+    <span class="l0">············································</span><span class="l4">██</span><span class="l0">··················</span><span class="l3">▓▓▓▓▓▓▓▓</span><span class="l1">░░</span><span class="l0">··</span><span class="l1">░░</span><span class="l0">··</span><span class="l1">░░░░</span><span class="l0">··</span><span class="l4">██</span><span class="l2">▒▒</span><span class="l1">░░</span><span class="l2">▒▒▒▒</span><span class="l3">▓▓</span><span class="l4">██</span><span class="l1">░░</span><span class="l4">██</span><span class="l1">░░</span>
+Mon <span class="l0">············································</span><span class="l3">▓▓</span><span class="l0">··················</span><span class="l2">▒▒▒▒</span><span class="l3">▓▓</span><span class="l1">░░</span><span class="l3">▓▓</span><span class="l1">░░</span><span class="l0">··</span><span class="l2">▒▒</span><span class="l0">··</span><span class="l1">░░░░</span><span class="l3">▓▓▓▓</span><span class="l2">▒▒</span><span class="l3">▓▓</span><span class="l4">██</span><span class="l3">▓▓</span><span class="l4">██████</span><span class="l2">▒▒</span>
+    <span class="l0">································································</span><span class="l2">▒▒▒▒</span><span class="l1">░░</span><span class="l3">▓▓▓▓</span><span class="l4">██</span><span class="l0">··</span><span class="l2">▒▒</span><span class="l1">░░░░░░</span><span class="l4">██</span><span class="l1">░░</span><span class="l4">██</span><span class="l3">▓▓</span><span class="l4">██</span><span class="l2">▒▒</span><span class="l4">████</span><span class="l3">▓▓</span><span class="l4">██</span>
+Wed <span class="l0">································································</span><span class="l1">░░</span><span class="l3">▓▓</span><span class="l1">░░</span><span class="l3">▓▓</span><span class="l2">▒▒▒▒</span><span class="l0">··</span><span class="l1">░░</span><span class="l0">··</span><span class="l3">▓▓</span><span class="l1">░░░░░░░░</span><span class="l2">▒▒</span><span class="l3">▓▓</span><span class="l2">▒▒▒▒</span><span class="l4">██</span><span class="l1">░░</span><span class="l4">██</span>
+    <span class="l0">····························································</span><span class="l4">██</span><span class="l1">░░</span><span class="l3">▓▓</span><span class="l4">██</span><span class="l0">··</span><span class="l1">░░</span><span class="l0">··</span><span class="l3">▓▓</span><span class="l2">▒▒</span><span class="l3">▓▓</span><span class="l1">░░</span><span class="l0">··</span><span class="l1">░░</span><span class="l4">██</span><span class="l2">▒▒</span><span class="l3">▓▓</span><span class="l2">▒▒</span><span class="l3">▓▓▓▓</span><span class="l4">████</span><span class="l1">░░</span><span class="l4">██</span>
+Fri <span class="l0">························································</span><span class="l1">░░</span><span class="l0">····</span><span class="l4">██</span><span class="l1">░░</span><span class="l4">██</span><span class="l0">··</span><span class="l1">░░░░</span><span class="l3">▓▓</span><span class="l0">··</span><span class="l2">▒▒</span><span class="l1">░░</span><span class="l0">··</span><span class="l1">░░</span><span class="l3">▓▓</span><span class="l2">▒▒</span><span class="l1">░░░░░░</span><span class="l4">██</span><span class="l3">▓▓</span><span class="l4">██</span><span class="l1">░░</span><span class="l4">██</span>
+    <span class="l0">······························································</span><span class="l4">██</span><span class="l3">▓▓</span><span class="l1">░░</span><span class="l3">▓▓▓▓</span><span class="l0">··</span><span class="l1">░░</span><span class="l0">··</span><span class="l3">▓▓</span><span class="l1">░░░░</span><span class="l4">██</span><span class="l1">░░</span><span class="l2">▒▒</span><span class="l1">░░</span><span class="l2">▒▒</span><span class="l4">██████</span><span class="l2">▒▒</span><span class="l3">▓▓▓▓</span>
+
+    less <span class="l0">··</span> <span class="l1">░░</span> <span class="l2">▒▒</span> <span class="l3">▓▓</span> <span class="l4">██</span> more</pre><p class="heat-total"><b>1,388</b> contributions in the last year · active <b>138</b> days · longest streak <b>76</b> days</p><!-- /sync:heatmap -->
+      </figure>
+    </section>
+
+    <!-- ───────────────────────────── work ───────────────────────────── -->
+    <section id="work" aria-labelledby="h-work">
+      <h2 id="h-work" class="h"><span class="ps1" aria-hidden="true">$ ls ~/</span>selected work</h2>
+      <p class="lede">Six things I’d most like to talk about in an interview. Everything else is <a href="#repos">further down</a>.</p>
+
+      <article class="card" id="p-helmsman" data-project="helmsman" data-url="https://github.com/zishaan1911/Helmsman">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">01</span>
+            <h3>Helmsman</h3>
+            <span class="badge">v1.0.0</span>
+          </header>
+          <p class="card-lede">GitOps deployment with an AI risk gate and self-healing rollback. Push code, and Helmsman containerizes it, renders the manifests, reviews the risk and commits the change for ArgoCD or Flux to roll out.</p>
+          <ul class="bullets">
+            <li>Seven small Go CLIs that run in CI and as a cluster CronJob. Nothing calls the Kubernetes API to make a change: every deploy is an auditable, revertible Git commit.</li>
+            <li>AI is used in exactly two places, risk review on top of static policy checks and plain-English root-cause analysis. Both fall back to deterministic output when the model is unreachable.</li>
+            <li>Rollback is a <code>git revert</code> triggered by health rules, never a model decision.</li>
+          </ul>
+          <ul class="metrics">
+            <li><b>85.7%</b> test coverage</li>
+            <li><b>0</b> dependencies</li>
+            <li><b>7</b> CLIs, one image</li>
+          </ul>
+          <ul class="tags"><li>Go</li><li>Kubernetes</li><li>ArgoCD</li><li>Flux</li><li>Docker</li><li>Gemini</li><li>GitHub Actions</li></ul>
+          <p class="links"><a href="https://github.com/zishaan1911/Helmsman">source</a><a href="https://zishaan1911.github.io/Helmsman/">website</a><a href="https://github.com/zishaan1911/Helmsman/releases/latest">release</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Pipeline: git push, detect, containerize, render manifests, AI risk review, commit to the GitOps repo, ArgoCD or Flux syncs, health watcher; if unhealthy, git revert and an AI root-cause issue.">git push
+   │
+   ▼
+detect ─▶ containerize ─▶ render manifests
+                                 │
+                                 ▼
+                          AI risk review
+                          policy + Gemini
+                                 │
+                                 ▼
+ArgoCD / Flux ◀──── commit to GitOps repo
+   │
+   ▼
+health-watcher ── healthy ──▶ done
+   │ unhealthy
+   ▼
+git revert + AI root-cause issue</pre>
+      </article>
+
+      <article class="card" id="p-vector" data-project="vector" data-url="https://github.com/zishaan1911/Vector-missile-interceptor">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">02</span>
+            <h3>Vector</h3>
+            <span class="badge">C++20</span>
+          </header>
+          <p class="card-lede">A real-time simulator for autonomous interception: physics, noisy sensing, Bayesian state estimation, guidance and control composed into one closed loop.</p>
+          <ul class="bullets">
+            <li>A constant-velocity Kalman filter tracks the target through Gaussian noise and dropped detections, and its covariance is drawn as a true uncertainty ellipse.</li>
+            <li>True proportional navigation and pure pursuit behind one interface, with an iterative intercept-point predictor and a jerk-limited actuator model.</li>
+            <li>Headless Monte Carlo runner: up to 50,000 deterministically seeded trials per batch, scoring success rate, miss distance and robustness to sensor noise.</li>
+          </ul>
+          <ul class="metrics">
+            <li><b>74.3%</b> intercept rate vs evasive targets</li>
+            <li><b>50,000</b>-trial batches</li>
+            <li><b>120 Hz</b> RK4 physics</li>
+          </ul>
+          <ul class="tags"><li>C++20</li><li>Eigen</li><li>OpenGL 3.3</li><li>Dear ImGui</li><li>ImPlot</li><li>doctest</li><li>CMake</li></ul>
+          <p class="links"><a href="https://github.com/zishaan1911/Vector-missile-interceptor">source</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Closed loop: RK4 physics, noisy sensor, Kalman filter, guidance law using proportional navigation, controller with lag and jerk limit, back to physics.">┌─▶ RK4 physics ─▶ noisy sensor
+│   120 Hz step     noise + dropout
+│                        │
+│                        ▼
+│                  Kalman filter
+│                  6-state CV
+│                        │
+│                        ▼
+│                  guidance law
+│                  a = N·Vc·(ω × r̂)
+│                        │
+└── controller ◀─────────┘
+    lag + jerk limit</pre>
+      </article>
+
+      <article class="card" id="p-gasx" data-project="gasx" data-url="https://github.com/zishaan1911/GASX">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">03</span>
+            <h3>GASX</h3>
+            <span class="badge badge-warm">MUBA ’26 finalist</span>
+          </header>
+          <p class="card-lede">An Ethereum gas futures exchange on Sui. It turns blockspace congestion into a tradeable index, and lets anyone who pays gas hedge it.</p>
+          <ul class="bullets">
+            <li>Led the build of EGSI, a 0–1000 index of Ethereum blockspace stress computed from live chain data, with an AI forecast on top.</li>
+            <li>One-hour EGSI futures settle in USDC through Move contracts on Sui, deliberately not the chain whose congestion is being traded. The house book is hedged with ETH options on Thetanuts (Base).</li>
+            <li>Every AI action passes a policy layer first: position caps, 1% max slippage, 70% minimum confidence and an isolated wallet.</li>
+          </ul>
+          <ul class="metrics">
+            <li><b>Finalist</b> MUBA Hackathon 2026</li>
+            <li><b>Honourable mention</b> from Sui</li>
+          </ul>
+          <ul class="tags"><li>Move</li><li>Sui</li><li>TypeScript</li><li>Python</li><li>C++</li><li>React</li><li>MySQL</li><li>Docker</li></ul>
+          <p class="links"><a href="https://github.com/zishaan1911/GASX">source</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Data flow: Ethereum base fee and mempool feed the EGSI engine, which serves an API gateway for the trading terminal and the Kora copilot; futures settle on Sui and are hedged on Thetanuts.">ETH base fee · mempool
+        │
+        ▼
+EGSI engine   Python + C++
+index 0–1000 + AI forecast
+        │
+        ▼
+API gateway ─▶ trading terminal
+        │      + Kora copilot
+        ▼
+Sui / Move ◀──▶ Thetanuts
+EGSI-1H futures  ETH options hedge</pre>
+      </article>
+
+      <article class="card" id="p-kerrscope" data-project="kerrscope" data-url="https://github.com/zishaan1911/Kerrscope">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">04</span>
+            <h3>Kerrscope</h3>
+            <span class="badge">v1.1.0</span>
+          </header>
+          <p class="card-lede">A real-time Kerr black hole ray tracer. Gravitational lensing isn’t a screen-space effect here: every pixel’s photon path is integrated through curved spacetime on the GPU.</p>
+          <ul class="bullets">
+            <li>Integrates Hamilton’s equations for null geodesics in the Kerr metric with RK4, using analytic derivatives of the inverse metric, inside an OpenGL 3.3 fragment shader.</li>
+            <li>Accretion disk with redshift, Doppler shift and beaming, orbiting bodies lensed into thin arcs, and black-hole spin adjustable live.</li>
+            <li>Runs on GPUs as old as Intel HD 4000. Static release binaries for Linux and Windows, with published SHA-256 checksums.</li>
+          </ul>
+          <ul class="metrics">
+            <li><b>1</b> geodesic per pixel</li>
+            <li><b>OpenGL 3.3</b> no compute shaders</li>
+          </ul>
+          <ul class="tags"><li>C++17</li><li>OpenGL 3.3</li><li>GLSL</li><li>GLFW</li><li>GLM</li><li>CMake</li></ul>
+          <p class="links"><a href="https://github.com/zishaan1911/Kerrscope">source</a><a href="https://zishaan1911.github.io/Kerrscope/">website</a><a href="https://github.com/zishaan1911/Kerrscope/releases/latest">release</a></p>
+        </div>
+        <pre class="art art-bh" role="img" aria-label="ASCII drawing of a black hole: a dark shadow ringed by light, an accretion disk across the middle, and its lensed image arching above and below.">                    .-=+**+=-.
+                 -#%*=:....:=*%#-
+               =%*:    -++-    :*%=
+             .*%-   ##      ##   -%*.
+             +%:  .@          @.  :%+
+            .#*.  @            @  .*#.
+ -===+++***###%%%@@@          *@+++*#====----::::
+                =.@            @.=
+                 =.@          @.=
+                  --##      ##--
+                     -==++==-</pre>
+      </article>
+
+      <article class="card" id="p-smolgpt" data-project="smolgpt" data-url="https://github.com/zishaan1911/SmolGPT">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">05</span>
+            <h3>SmolGPT</h3>
+            <span class="badge">51.1M params</span>
+          </header>
+          <p class="card-lede">A GPT-style language model written and trained from scratch, which now runs entirely in your browser.</p>
+          <ul class="bullets">
+            <li>Decoder-only transformer in PyTorch: 8 layers, 8 heads, 512-dim embeddings and tied input/output weights, trained on TinyStories.</li>
+            <li>Fixed free-tier Colab out-of-memory crashes by streaming tokens into a memory-mapped file. Checkpointing and auto-resume survive disconnects on a single T4.</li>
+            <li>bf16 mixed precision, cosine learning-rate schedule with warmup, gradient accumulation and clipping.</li>
+          </ul>
+          <ul class="metrics">
+            <li><b>1.2</b> validation loss by epoch 5</li>
+            <li><b>1×</b> T4 GPU</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>PyTorch</li><li>CUDA</li><li>Hugging Face</li></ul>
+          <p class="links"><a href="https://zishaan1911.github.io/SmolGPT/">try it in your browser</a><a href="https://github.com/zishaan1911/SmolGPT">source</a><a href="https://huggingface.co/zishaan1911">hugging face</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Model pipeline: TinyStories, tokenizer, memory-mapped token file, token embeddings, eight blocks of causal self-attention and MLP, tied language-model head.">TinyStories ─▶ tokenizer
+                  │ streamed
+                  ▼
+            memmap .bin
+                  │
+                  ▼
+      token embedding · 512
+                  │
+       ┌──────────▼──────────┐
+       │ causal self-attn    │
+       │         ▼           │ × 8
+       │        MLP          │
+       └──────────┬──────────┘
+                  ▼
+        LM head (tied weights)</pre>
+      </article>
+
+      <article class="card" id="p-openrover" data-project="openrover" data-url="https://github.com/zishaan1911/OpenRover">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">06</span>
+            <h3>OpenRover</h3>
+            <span class="badge">in progress</span>
+          </header>
+          <p class="card-lede">A simulation-first autonomous rover platform. The autonomy stack sits behind one hardware abstraction layer, so the same code runs in Gazebo now and on a physical rover later.</p>
+          <ul class="bullets">
+            <li>Differential-drive kinematics and rover state management in C++20, covered by GoogleTest and built with CMake.</li>
+            <li>Architecture for simulator-independent algorithms, reproducible experiments, fault injection and telemetry.</li>
+            <li>Planned path from sensor simulation through localization, SLAM, planning and obstacle avoidance to autonomous missions, behind an ASP.NET Core API and a web dashboard.</li>
+          </ul>
+          <ul class="tags"><li>C++20</li><li>CMake</li><li>GoogleTest</li><li>ASP.NET Core</li><li>PostgreSQL</li><li>Docker</li><li>Python</li></ul>
+          <p class="links"><a href="https://github.com/zishaan1911/OpenRover">source</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Architecture: web dashboard and ASP.NET Core API above the C++20 OpenRover core, where sensors feed localization, mapping, planning and control, above a hardware abstraction layer over Gazebo now and a physical rover later.">web dashboard ◀──▶ ASP.NET Core API
+                          │
+┌──── OpenRover core · C++20 ────┐
+│ sensors ─▶ localization        │
+│    ─▶ mapping ─▶ planning      │
+│    ─▶ control ─▶ missions      │
+└─── hardware abstraction layer ─┘
+      │                    │
+   Gazebo              physical
+   (now)            rover (later)</pre>
+      </article>
+    </section>
+
+    <!-- ─────────────────────────── research ─────────────────────────── -->
+    <section id="research" aria-labelledby="h-research">
+      <h2 id="h-research" class="h"><span class="ps1" aria-hidden="true">$ ls ~/</span>research</h2>
+      <p class="lede">Open-access work in mathematics and theoretical computer science.</p>
+
+      <article class="card" id="paper-xn" data-project="paper">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">R1</span>
+            <h3>How Long is the Graph of xⁿ?</h3>
+          </header>
+          <p class="byline">Logarithmic corner defects in arc length · Z. Ahmed · preprint, Zenodo, 2026</p>
+          <p class="card-lede">As <var>n</var> → ∞ the graph of <var>y</var> = <var>x</var>ⁿ on [0, 1] turns into a corner, so its length tends to 2. The paper works out exactly how fast.</p>
+          <pre class="math" role="img" aria-label="L of n equals the integral from 0 to 1 of the square root of 1 plus n squared x to the 2n minus 2, dx. Two minus L of n equals ln n plus 1 minus ln 2, over n minus 1, plus big O of ln squared n over n squared.">L(n) = ∫₀¹ √(1 + n²x²ⁿ⁻²) dx  ⟶  2
+
+2 − L(n) = (ln n + 1 − ln 2)/(n − 1) + O(ln²n / n²)</pre>
+          <ul class="bullets">
+            <li>An exact, rapidly convergent Gamma-function formula for <var>L</var>(<var>n</var>), derived from a single Beta integral.</li>
+            <li>Corners of any turning angle θ: the coefficient of (ln <var>n</var>)/<var>n</var> is 2 sin²(θ/2).</li>
+            <li>By contrast the squircle |<var>x</var>|ᵖ + |<var>y</var>|ᵖ = 1 has no logarithmic term. Every numerical claim is recomputed by a script.</li>
+          </ul>
+          <ul class="tags"><li>asymptotic expansion</li><li>Beta &amp; Gamma functions</li><li>Mellin transform</li><li>mpmath</li></ul>
+          <p class="links"><a href="https://doi.org/10.5281/zenodo.22970394">doi:10.5281/zenodo.22970394</a><a href="https://github.com/zishaan1911/arc-length-of-xn">LaTeX + verification</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Plot of y equals x to the n on the unit interval for n equals 1, 2, 6 and 40. As n grows the curve hugs the bottom and right edges, forming a corner.">y
+1 ┤                                      .#
+  │                                   ...:#
+  │                                ...:::+#
+  │                             ... ::: ++#
+  │                          ...   ::  ++ #
+  │                       ...    :::   + ##
+  │                    ...     :::    ++ #
+  │                 ...     ::::     ++  #
+  │              ...      :::       ++   #
+  │           ...      ::::       +++    #
+  │        ...      ::::         ++     ##
+  │     ...     :::::         ++++      #
+  │  ...   ::::::         +++++        ##
+0 ┼#####################################
+  0                                      1 x
+
+  . n=1   : n=2   + n=6   # n=40</pre>
+      </article>
+
+      <article class="card" id="paper-sat" data-project="sat">
+        <div class="card-text">
+          <header class="card-head">
+            <span class="card-idx" aria-hidden="true">R2</span>
+            <h3>A Hybrid Learning Framework for Automated SAT Solver Selection</h3>
+          </header>
+          <p class="byline">Z. Ahmed and T. Kwan Lee · research proposal, Zenodo, 2026 · Final Year Project, UTAR</p>
+          <p class="card-lede">Per-instance SAT solver selection that fuses handcrafted SATzilla-style features with graph-neural-network embeddings of the literal–clause graph, and measures what each representation actually contributes.</p>
+          <ul class="bullets">
+            <li>The feature-only selector closes 73% of the gap between the single best solver and the virtual best on SAT18-EXP.</li>
+            <li>The graph branch is 28× cheaper to compute than SATzilla’s probing features.</li>
+            <li>Pre-registered paired significance tests, family-held-out folds and nested-CV tuning, with negative results reported as plainly as positive ones.</li>
+          </ul>
+          <ul class="tags"><li>PyTorch</li><li>graph neural networks</li><li>ASlib</li><li>CDCL solvers</li></ul>
+          <p class="links"><a href="https://doi.org/10.5281/zenodo.22763759">doi:10.5281/zenodo.22763759</a><a href="https://github.com/zishaan1911/hybrid-sat-selector">source</a></p>
+        </div>
+        <pre class="art" role="img" aria-label="Pipeline: a CNF formula yields SATzilla features and a literal-clause graph encoded by a GNN; both feed a selector that picks a solver.">        ┌─▶ SATzilla features ──┐
+        │                       │
+CNF ────┤                       ├─▶ selector
+        │                       │      │
+        └─▶ literal–clause ─────┘      ▼
+            graph ─▶ GNN          best solver
+                                  for this
+                                  instance</pre>
+      </article>
+    </section>
+
+    <!-- ────────────────────────── experience ────────────────────────── -->
+    <section id="experience" aria-labelledby="h-exp">
+      <h2 id="h-exp" class="h"><span class="ps1" aria-hidden="true">$ cat </span>experience</h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">Sep 2026 — now</p>
+          <h3>Software Engineer Intern <span class="at">@ APP Timber</span></h3>
+          <p>Modernising a legacy in-house learning management system end to end, from technical audit and architecture redesign through build, QA and deployment.</p>
+        </li>
+        <li>
+          <p class="when">Sep 2026 — now</p>
+          <h3>Full-Stack Mobile Applications Engineer <span class="at">· contract</span></h3>
+          <p>Building an AI-native fitness and health app with personalised action plans, plus admin panels for doctors and developers. One codebase for iOS, Android and the web, integrated with Strava, Apple Health and Google Health Connect.</p>
+        </li>
+        <li>
+          <p class="when">Jun 2026 — now</p>
+          <h3>Programming Instructor <span class="at">@ UTAR Maker’s Club</span></h3>
+          <p>Teaching programming, AI, Arduino and 3D modelling to 15+ members, including students from non-technical backgrounds.</p>
+        </li>
+        <li>
+          <p class="when">Jul 2025 — now</p>
+          <h3>Software Developer <span class="at">· freelance</span></h3>
+          <p>Web applications and internal tools for 4 local businesses. Built a battery-tracking tool for an e-bike rental company that cut battery logging time by about 70%.</p>
+        </li>
+        <li class="edu">
+          <p class="when">graduating Oct 2027</p>
+          <h3>Bachelor of Computer Science (Hons) <span class="at">@ Universiti Tunku Abdul Rahman (UTAR), Perak</span></h3>
+          <p>Coursework: software engineering, data structures and algorithms, algorithm analysis, operating systems, database technology, cloud computing, AI techniques, object-oriented programming.</p>
+        </li>
+      </ol>
+
+      <div class="split">
+        <div class="box" id="stack">
+          <h3 class="box-title">~/stack</h3>
+          <ul class="tree">
+            <li><b>languages/</b> C++17/20 · Python · Go · Rust · TypeScript · SQL · C# · Swift · Kotlin · Move</li>
+            <li><b>infra/</b> Linux · Docker · Kubernetes · Terraform · ArgoCD · GitHub Actions · AWS · CodeQL</li>
+            <li><b>ml/</b> PyTorch · CUDA · NumPy · Pandas · OpenCV · ONNX</li>
+            <li><b>graphics-sim/</b> OpenGL · GLSL · Eigen · Dear ImGui · Gazebo</li>
+            <li><b>data/</b> PostgreSQL · MySQL · SQLite · storage-engine design</li>
+            <li><b>testing/</b> GoogleTest · doctest · PyTest · CI/CD</li>
+            <li><b>mobile/</b> iOS · Android</li>
+          </ul>
+        </div>
+        <div class="box" id="certs">
+          <h3 class="box-title">~/certs <span class="dim">(22 total)</span></h3>
+          <ul class="ls">
+            <li>Build Your Own SLM <span class="dim">— Google DeepMind</span></li>
+            <li>Claude Code in Action <span class="dim">— Anthropic</span></li>
+            <li>Introduction to Linux · Introduction to Kubernetes <span class="dim">— Linux Foundation</span></li>
+            <li>Kubernetes on Instinct GPUs · AI on AMD <span class="dim">— AMD</span></li>
+            <li>Managing Applications at Scale with Amazon ECS <span class="dim">— AWS</span></li>
+            <li>Development for Enterprise DevOps <span class="dim">— Microsoft</span></li>
+            <li>AI Database Foundations Associate <span class="dim">— Oracle</span></li>
+            <li>Python Developer Certification <span class="dim">— freeCodeCamp</span></li>
+          </ul>
+          <p class="dim">Full list, verifiable, on <a href="https://www.linkedin.com/in/zishaan-ahmed">LinkedIn</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── activity ─────────────────────────── -->
+    <section id="log" aria-labelledby="h-log">
+      <h2 id="h-log" class="h"><span class="ps1" aria-hidden="true">$ git log </span>recent activity</h2>
+      <p class="lede">Written by a bot that reads my commits twice a day. It isn’t allowed to invent anything: every line is checked against the commits it came from before it gets here. <a href="https://github.com/zishaan1911/zishaan1911.github.io#the-sync-bot">How it works</a>.</p>
+      <!-- sync:updates --><ol class="updates"><li><time datetime="2026-09-25">2026-09-25</time><a class="repo" href="https://github.com/zishaan1911/arc-length-of-xn">arc-length-of-xn</a><span><span class="kind">new</span>Started arc-length-of-xn: a paper on how fast the arc length of y = xⁿ approaches 2, with LaTeX source and a verification script.</span></li><li><time datetime="2026-09-25">2026-09-25</time><a class="repo" href="https://github.com/zishaan1911/arc-length-of-xn">arc-length-of-xn</a><span>Add paper: How long is the graph of x^n? Logarithmic corner defects in arc length.</span></li><li><time datetime="2026-09-25">2026-09-25</time><a class="repo" href="https://github.com/zishaan1911/hybrid-sat-selector">hybrid-sat-selector</a><span>Cost-accounted PAR10 in code, charged on every hsat train run.</span></li><li><time datetime="2026-09-19">2026-09-19</time><a class="repo" href="https://github.com/zishaan1911/OpenRover">OpenRover</a><span>Add IMU sensor and its required world system plugin.</span></li><li><time datetime="2026-09-14">2026-09-14</time><a class="repo" href="https://github.com/zishaan1911/Vector-missile-interceptor">Vector-missile-interceptor</a><span><span class="kind">new</span>Started Vector-missile-interceptor: a real-time simulator for autonomous interception, built around a Kalman filter and proportional navigation.</span></li><li><time datetime="2026-09-14">2026-09-14</time><a class="repo" href="https://github.com/zishaan1911/Vector-missile-interceptor">Vector-missile-interceptor</a><span>Add VECTOR real-time app: GLFW+ImGui+ImPlot UI, Mission Control, telemetry, Monte Carlo panel.</span></li><li><time datetime="2026-09-09">2026-09-09</time><a class="repo" href="https://github.com/zishaan1911/hybrid-sat-selector">hybrid-sat-selector</a><span><span class="kind">new</span>Started hybrid-sat-selector: per-instance SAT solver selection that fuses SATzilla features with GNN embeddings; my Final Year Project.</span></li><li><time datetime="2026-09-09">2026-09-09</time><a class="repo" href="https://github.com/zishaan1911/MicroSlop">MicroSlop</a><span><span class="kind">new</span>Started MicroSlop.</span></li></ol><!-- /sync:updates -->
+      <div class="box langs-box">
+        <h3 class="box-title">languages <span class="dim">by bytes of code, public repos</span></h3>
+        <!-- sync:langs --><ul class="langs"><li><span>Python</span><span class="bar" aria-hidden="true">███████████<i>░░░░░░░░░░░░░░░░░</i></span><span class="pct">37.5%</span></li><li><span>C++</span><span class="bar" aria-hidden="true">███████<i>░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">24.0%</span></li><li><span>TypeScript</span><span class="bar" aria-hidden="true">█████<i>░░░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">16.4%</span></li><li><span>Go</span><span class="bar" aria-hidden="true">██<i>░░░░░░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">7.2%</span></li><li><span>Rust</span><span class="bar" aria-hidden="true">█<i>░░░░░░░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">5.3%</span></li><li><span>Move</span><span class="bar" aria-hidden="true">█<i>░░░░░░░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">4.0%</span></li><li><span>TeX</span><span class="bar" aria-hidden="true">█<i>░░░░░░░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">2.7%</span></li><li><span>other</span><span class="bar" aria-hidden="true">█<i>░░░░░░░░░░░░░░░░░░░░░░░░░░░</i></span><span class="pct">2.9%</span></li></ul><!-- /sync:langs -->
+      </div>
+    </section>
+
+    <!-- ──────────────────────────── repos ───────────────────────────── -->
+    <section id="repos" aria-labelledby="h-repos">
+      <h2 id="h-repos" class="h"><span class="ps1" aria-hidden="true">$ ls -la ~/</span>everything else</h2>
+      <p class="lede"><!-- sync:repo-count -->27<!-- /sync:repo-count --> public repositories · <!-- sync:stars -->51<!-- /sync:stars --> stars. The ones above are left out here. Grouped by what they are, most recently touched first.</p>
+      <!-- sync:repos --><div class="groups"><div class="box group"><h3 class="box-title">systems, simulation &amp; graphics</h3><p class="group-blurb">Lower-level work in C++, Rust and GPU code.</p><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/cppnum">cppnum</a><span class="repo-meta">★ 2 · Jun 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/RustDB">RustDB</a><span class="repo-meta">Rust · ★ 2 · Jun 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/BlackHole-Simulation">BlackHole-Simulation</a><span class="repo-meta">Jupyter Notebook · ★ 3 · Feb 2026</span><p class="repo-desc">The GPU-Accelerated Kerr Ray Tracing system is a simulation tool designed to visualize a rotating black hole&#39;s shadow and its accretion disk. By performing ray tracing within the Kerr metric, the notebook traces photon geodesics backward from the observer&#39;s camera to determine where light originates.</p></div></div><div class="box group"><h3 class="box-title">machine learning &amp; vision</h3><p class="group-blurb">Models, training pipelines and experiments.</p><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/Traffic-Sign-Detection">Traffic-Sign-Detection</a><span class="repo-meta">C++ · ★ 2 · Jul 2026</span></div></div><div class="box group"><h3 class="box-title">quantitative finance</h3><p class="group-blurb">Pricing, risk and signal research.</p><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/MnA-Jet-Signal">MnA-Jet-Signal</a><span class="repo-meta">Python · ★ 1 · Aug 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/pitwall">pitwall</a><span class="repo-meta">TypeScript · ★ 2 · Jun 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/DL-SP500">DL-SP500</a><span class="repo-meta">★ 2 · Jun 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/Temporal-Graph-Neural-Network-TGNN-for-Causal-Asset-Relationships">Temporal-Graph-Neural-Network-TGNN-for-Causal-Asset-Relationships</a><span class="repo-meta">Jupyter Notebook · ★ 3 · May 2026</span><p class="repo-desc">The Temporal Graph Neural Network (TGNN) for Causal Asset Relationships is a deep learning system designed to discover and model the dynamic causal relationships across various financial assets.</p></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/Algorithmic-Options-Hedging-Model">Algorithmic-Options-Hedging-Model</a><span class="repo-meta">Python · ★ 3 · Feb 2026</span><p class="repo-desc">A multi-threaded options hedging model. Engineered with a decoupled architecture to manage strategy dispatch, dynamic volatility surface generation, and live telemetry logging via SQLite (WAL mode). Ensures mathematically rigorous risk management through MC stochastic simulations and deterministic PCG64-seeded live/backtesting environments.</p></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/monte-carlo-engine">monte-carlo-engine</a><span class="repo-meta">Jupyter Notebook · ★ 3 · Feb 2026</span><p class="repo-desc">A multi-asset Monte Carlo pricing and risk engine built in Python. Leveraging Numba for execution speeds and market data pipelines, the engine simulates millions of stochastic paths to price complex derivatives and calculates highly stable, multi-dimensional risk sensitivities.</p></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/alpha-decay-detection-system">alpha-decay-detection-system</a><span class="repo-meta">Jupyter Notebook · ★ 3 · Feb 2026</span><p class="repo-desc">A quantitative research project analyzing the decay of trading strategy alpha over time using statistical modeling, rolling performance metrics, and signal persistence analysis.</p></div></div><div class="box group"><h3 class="box-title">tools, apps &amp; client work</h3><p class="group-blurb">Built for a client, a hackathon or my own machine.</p><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/MicroSlop">MicroSlop</a><span class="repo-meta">Python · ★ 2 · Sep 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/GreenNova">GreenNova</a><span class="repo-meta">HTML · ★ 1 · Aug 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/klinik">klinik</a><span class="repo-meta">HTML · ★ 2 · May 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/taigu-battery-logging">taigu-battery-logging</a><span class="repo-meta">HTML · ★ 2 · Apr 2026</span></div></div><div class="box group"><h3 class="box-title">coursework &amp; practice</h3><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/LeetCode-Solutions">LeetCode-Solutions</a><span class="repo-meta">C++ · ★ 1 · Sep 2026</span><p class="repo-desc">C++ solutions to LeetCode problems.</p></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/UCCD2303-Database-Technology-Assignment">UCCD2303-Database-Technology-Assignment</a><span class="repo-meta">★ 2 · Aug 2026</span></div><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/UCCC2513-Mini-Project">UCCC2513-Mini-Project</a><span class="repo-meta">★ 2 · Jul 2026</span></div></div><div class="box group"><h3 class="box-title">other</h3><div class="repo-row"><a class="repo-name" href="https://github.com/zishaan1911/rps-bot">rps-bot</a><span class="repo-meta">Python · ★ 2 · May 2026</span></div></div></div><!-- /sync:repos -->
+    </section>
+
+    <!-- ─────────────────────────── contact ──────────────────────────── -->
+    <section id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact" class="h"><span class="ps1" aria-hidden="true">$ </span>about &amp; contact</h2>
+      <div class="split">
+        <div class="box">
+          <h3 class="box-title">~/about.md</h3>
+          <p>I’m Zishaan, a Computer Science undergraduate at UTAR in Malaysia. I’m drawn to the parts of software where correctness is hard to fake: estimators, deployment pipelines, storage engines, and the maths underneath.</p>
+          <p>Most of what I build starts as a question I can’t answer by reading. What does a Kalman filter do when half the measurements go missing? How fast does the graph of <var>x</var>ⁿ become a corner? What does a transformer need to train on one free GPU?</p>
+          <p><span class="dot-live" aria-hidden="true">●</span> Looking for software engineering internships from 2027, and always happy to talk research.</p>
+        </div>
+        <div class="box">
+          <h3 class="box-title">~/contact</h3>
+          <ul class="contact">
+            <li><span class="k">email</span> <a href="mailto:iamzishaan@gmail.com">iamzishaan@gmail.com</a></li>
+            <li><span class="k">github</span> <a href="https://github.com/zishaan1911" rel="me">github.com/zishaan1911</a></li>
+            <li><span class="k">linkedin</span> <a href="https://www.linkedin.com/in/zishaan-ahmed" rel="me">in/zishaan-ahmed</a></li>
+            <li><span class="k">leetcode</span> <a href="https://leetcode.com/u/iamzishaan/" rel="me">u/iamzishaan</a></li>
+            <li><span class="k">hf</span> <a href="https://huggingface.co/zishaan1911" rel="me">huggingface.co/zishaan1911</a></li>
+            <li><span class="k">résumé</span> on request, by email</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© 2026 Zishaan Ahmed · hand-written HTML and CSS, no framework · activity, repos and stats synced <!-- sync:synced --><time datetime="2026-09-26T06:47:31Z">2026-09-26</time><!-- /sync:synced --> · <a href="https://github.com/zishaan1911/zishaan1911.github.io">source</a></p>
+  </footer>
+</div>
 </body>
 </html>

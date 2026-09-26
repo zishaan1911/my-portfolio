@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="phosphor">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<!-- Source for assets/img/og.png (1200×630). Regenerate: serve the repo root, then
+     msedge --headless --window-size=1200,630 --screenshot=og.png http://localhost:8000/scripts/og.html -->
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+  html, body { width: 1200px; height: 630px; overflow: hidden; margin: 0; }
+  body::before { z-index: 5; }
+  .og-card {
+    position: absolute; inset: 28px;
+    border: 1px solid var(--line-strong);
+    background: var(--bg-raised);
+    box-shadow: 0 0 80px -20px var(--glow);
+    display: grid; grid-template-rows: auto 1fr auto;
+  }
+  .og-bar { display: flex; gap: 10px; align-items: center; padding: 12px 20px; border-bottom: 1px solid var(--line); background: var(--bg-sunk); color: var(--fg-dim); font-size: 18px; }
+  .og-bar .dots i { width: 14px; height: 14px; }
+  .og-body { display: grid; grid-template-columns: auto 1fr; gap: 44px; padding: 34px 44px 0; align-items: start; }
+  .banner { font-size: 13.4px !important; margin: 0; }
+  .who h1 { font-size: 40px; margin: 0 0 10px; }
+  .who p { font-size: 22px; color: var(--fg-dim); margin: 0 0 8px; line-height: 1.45; }
+  .who .ps1 { color: var(--accent); }
+  .photo { width: 120px; height: 120px; margin-top: 12px; }
+  .og-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+  .og-stats div { padding: 18px 26px 22px; border-right: 1px solid var(--line); }
+  .og-stats div:last-child { border-right: 0; }
+  .og-stats b { display: block; font-size: 34px; color: var(--warm); text-shadow: 0 0 14px var(--glow); }
+  .og-stats span { font-size: 17px; color: var(--fg-dim); }
+</style>
+</head>
+<body>
+<div class="og-card">
+  <div class="og-bar"><span class="dots"><i></i><i></i><i></i></span><span style="flex:1;text-align:center">zishaan1911.github.io</span></div>
+  <div class="og-body">
+    <div>
+      <pre class="banner">███████╗██╗███████╗██╗  ██╗ █████╗  █████╗ ███╗   ██╗
+╚══███╔╝██║██╔════╝██║  ██║██╔══██╗██╔══██╗████╗  ██║
+  ███╔╝ ██║███████╗███████║███████║███████║██╔██╗ ██║
+ ███╔╝  ██║╚════██║██╔══██║██╔══██║██╔══██║██║╚██╗██║
+███████╗██║███████║██║  ██║██║  ██║██║  ██║██║ ╚████║
+╚══════╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+ █████╗ ██╗  ██╗███╗   ███╗███████╗██████╗
+██╔══██╗██║  ██║████╗ ████║██╔════╝██╔══██╗
+███████║███████║██╔████╔██║█████╗  ██║  ██║
+██╔══██║██╔══██║██║╚██╔╝██║██╔══╝  ██║  ██║
+██║  ██║██║  ██║██║ ╚═╝ ██║███████╗██████╔╝
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚═════╝</pre>
+    </div>
+    <div class="who">
+      <h1>Zishaan Ahmed</h1>
+      <p>Software &amp; systems engineer<br>CS @ UTAR, Malaysia</p>
+      <p><span class="ps1">&gt;</span> simulators · GitOps · ML · math</p>
+      <figure class="photo"><img src="../assets/img/zishaan-ahmed.jpg" alt=""></figure>
+    </div>
+  </div>
+  <div class="og-stats">
+    <div><b>#48</b><span>GitHub, Malaysia</span></div>
+    <div><b>Finalist</b><span>MUBA Hackathon ’26</span></div>
+    <div><b>Top 4%</b><span>LeetCode</span></div>
+    <div><b>2</b><span>open-access preprints</span></div>
+  </div>
+</div>
+</body>
+</html>
