@@ -14,8 +14,8 @@
       "kind": "activity",
       "repo": "arc-length-of-xn",
       "date": "2026-09-25",
-      "text": "Add paper: How long is the graph of x^n? Logarithmic corner defects in arc length.",
-      "by": "commit",
+      "text": "Paper on arc length of y=xⁿ typeset in IEEE format, includes figures, tables, MIT license, and author affiliation.",
+      "by": "model",
       "sourceHash": "b13225084a79118f"
     },
     {
@@ -23,8 +23,8 @@
       "kind": "activity",
       "repo": "hybrid-sat-selector",
       "date": "2026-09-25",
-      "text": "Cost-accounted PAR10 in code, charged on every hsat train run.",
-      "by": "commit",
+      "text": "Implemented a per‑instance SAT solver selector combining SATzilla features with GNN embeddings, adding a CLI harness, training scripts, and cost‑accounted evaluation.",
+      "by": "model",
       "sourceHash": "9e10ce44be92ffe2"
     },
     {
@@ -32,8 +32,8 @@
       "kind": "activity",
       "repo": "OpenRover",
       "date": "2026-09-19",
-      "text": "Add IMU sensor and its required world system plugin.",
-      "by": "commit",
+      "text": "Added IMU and 2D LiDAR sensors to the rover model, bridged them to ROS 2 topics /imu and /scan, and included a sensor mast link.",
+      "by": "model",
       "sourceHash": "a22453168482d655"
     },
     {
@@ -50,8 +50,8 @@
       "kind": "activity",
       "repo": "Vector-missile-interceptor",
       "date": "2026-09-14",
-      "text": "Add VECTOR real-time app: GLFW+ImGui+ImPlot UI, Mission Control, telemetry, Monte Carlo panel.",
-      "by": "commit",
+      "text": "A real‑time autonomous interception simulator with a Kalman filter, proportional navigation, and a GLFW+ImGui UI for mission control and Monte Carlo analysis.",
+      "by": "model",
       "sourceHash": "0e2b3b5ce851ba49"
     },
     {
@@ -68,7 +68,7 @@
       "kind": "new",
       "repo": "MicroSlop",
       "date": "2026-09-09",
-      "text": "Started MicroSlop.",
+      "text": "Started MicroSlop: a terminal debloating tool that scans processes, startup entries, services, and context menu handlers, ranks them, and lets the user review and remove bloat with optional Gemini AI classification.",
       "by": null,
       "sourceHash": null
     }
