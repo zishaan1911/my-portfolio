@@ -1,6 +1,15 @@
 {
   "updates": [
     {
+      "key": "activity:pitwall:2026-W39",
+      "kind": "activity",
+      "repo": "pitwall",
+      "date": "2026-09-26",
+      "text": "Rebuilt pitwall as a race engineering tool on real F1 data, added pit loss measurement against the field, and deployed the dashboard to GitHub Pages.",
+      "by": "model",
+      "sourceHash": "8bc1bd45b543b581"
+    },
+    {
       "key": "new:arc-length-of-xn",
       "kind": "new",
       "repo": "arc-length-of-xn",
@@ -60,15 +69,6 @@
       "repo": "hybrid-sat-selector",
       "date": "2026-09-09",
       "text": "Started hybrid-sat-selector: per-instance SAT solver selection that fuses SATzilla features with GNN embeddings; my Final Year Project.",
-      "by": null,
-      "sourceHash": null
-    },
-    {
-      "key": "new:MicroSlop",
-      "kind": "new",
-      "repo": "MicroSlop",
-      "date": "2026-09-09",
-      "text": "Started MicroSlop: a terminal debloating tool that scans processes, startup entries, services, and context menu handlers, ranks them, and lets the user review and remove bloat with optional Gemini AI classification.",
       "by": null,
       "sourceHash": null
     }

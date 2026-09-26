@@ -2,6 +2,24 @@
   "user": "zishaan1911",
   "repos": [
     {
+      "name": "pitwall",
+      "url": "https://github.com/zishaan1911/pitwall",
+      "homepage": null,
+      "description": null,
+      "summary": "Race engineering analysis tool for Formula 1 that pulls timing, telemetry, weather and radio data, fits a tyre degradation model, and visualises strategy, pit loss and undercuts in a console.",
+      "summarySource": "groq",
+      "group": "quant",
+      "language": "TypeScript",
+      "stars": 2,
+      "topics": [],
+      "archived": false,
+      "pushedAt": "2026-09-26T15:48:05Z",
+      "createdAt": "2026-06-27T13:02:43Z",
+      "contextHash": "3b055b4eb35be3a1",
+      "genStatus": "ok",
+      "genAttempts": 0
+    },
+    {
       "name": "arc-length-of-xn",
       "url": "https://github.com/zishaan1911/arc-length-of-xn",
       "homepage": null,
@@ -281,25 +299,7 @@
       "createdAt": "2026-06-29T16:36:27Z",
       "contextHash": "b6f98f3a7ee7656b",
       "genStatus": "rejected",
-      "genAttempts": 2
-    },
-    {
-      "name": "pitwall",
-      "url": "https://github.com/zishaan1911/pitwall",
-      "homepage": null,
-      "description": null,
-      "summary": "A web application that visualizes racing data with components for gap charts, strategy visualization, timing towers, and tire degradation, built with TypeScript and a Python backend.",
-      "summarySource": "groq",
-      "group": "quant",
-      "language": "TypeScript",
-      "stars": 2,
-      "topics": [],
-      "archived": false,
-      "pushedAt": "2026-06-27T13:16:05Z",
-      "createdAt": "2026-06-27T13:02:43Z",
-      "contextHash": "b2369eb1d1936dd1",
-      "genStatus": "ok",
-      "genAttempts": 0
+      "genAttempts": 3
     },
     {
       "name": "cppnum",
@@ -317,7 +317,7 @@
       "createdAt": "2026-06-25T11:53:39Z",
       "contextHash": "724bb45a1d010122",
       "genStatus": "rejected",
-      "genAttempts": 2
+      "genAttempts": 3
     },
     {
       "name": "DL-SP500",
