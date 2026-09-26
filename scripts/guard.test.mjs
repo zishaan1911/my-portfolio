@@ -158,6 +158,14 @@ for (const [label, text] of [
   check(`rejects first person ${label}`, !r.ok, r.reason);
 }
 
+for (const [label, text] of [
+  ['"repository contains"', 'Repository contains only a license file and an empty README.'],
+  ['"a repository for"', 'A repository for a mini project built during the semester.'],
+]) {
+  const r = validateSummary(text, `${README} license file, empty README, mini project`);
+  check(`rejects a description of the repo, not the project: ${label}`, !r.ok, r.reason);
+}
+
 const io = validateSummary('A storage engine in Rust with a custom I/O layer and Docker builds.', `${README} Custom I/O layer.`);
 check('does not mistake "I/O" for first person', io.ok, io.reason || '');
 

@@ -337,6 +337,7 @@ Rules, all mandatory:
 - Third person, present tense. Never "I", "we", "our" or "my".
 - Lead with what it is ("A real-time …", "An event-driven backtester that …"), then what is technically interesting about it. Name the core technique or stack when the material states it.
 - One sentence, 60 to 200 characters, plain text: no markdown, no links, no quotes. Do not start with the repository name.
+- Describe the project, never the repository ("a repository for…", "contains only a README"). If the material is too thin to say what the project does, return an empty string as the summary.
 - group: the single best id from the allowed list.`;
 
 function descSchema(groupIds) {
@@ -371,9 +372,13 @@ async function describeRepos({ repos, prev, config, gh, llm, report, force }) {
       genStatus: old?.genStatus ?? 'pending',
       genAttempts: old?.genAttempts ?? 0,
     });
+    if (repo.summarySource === 'groq' && repo.summary) repo.summary = sentence(repo.summary);
 
     if (override) {
       Object.assign(repo, { summary: override, summarySource: 'manual', genStatus: 'ok' });
+    } else if (repo.summarySource === 'groq' && !validateSummary(repo.summary, repo.summary).ok) {
+      // The guard has learned something since this was accepted: write it again.
+      Object.assign(repo, { summary: repo.description, summarySource: 'github', genStatus: 'pending', genAttempts: 0, contextHash: null });
     } else if (repo.summarySource === 'manual') {
       // The override was removed from content/projects.json: start over.
       Object.assign(repo, { summary: repo.description, summarySource: 'github', genStatus: 'pending', genAttempts: 0 });
@@ -387,7 +392,7 @@ async function describeRepos({ repos, prev, config, gh, llm, report, force }) {
     }
     if (override && repo.group) continue;
 
-    const untouched = old && old.pushedAt === repo.pushedAt && !force;
+    const untouched = old && old.pushedAt === repo.pushedAt && repo.contextHash !== null && !force;
     if (untouched && repo.genStatus === 'ok' && repo.group) { stats.cached++; continue; }
     if (untouched && !llm.available) { stats.skipped++; continue; } // nothing new to read, nobody to write it
 
@@ -424,7 +429,7 @@ async function describeRepos({ repos, prev, config, gh, llm, report, force }) {
       if (!assigned) repo.group = groupIds.includes(out.group) ? out.group : 'other';
       if (override) continue;
       if (verdict.ok) {
-        Object.assign(repo, { summary: verdict.text, summarySource: 'groq', genStatus: 'ok', genAttempts: 0 });
+        Object.assign(repo, { summary: sentence(verdict.text), summarySource: 'groq', genStatus: 'ok', genAttempts: 0 });
         stats.generated++;
       } else {
         report.reject(repo.name, verdict.reason, out.summary);

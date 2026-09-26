@@ -71,6 +71,10 @@ const META = [
   /\bbased on the (?:readme|provided|information|material)\b/i,
   /\bthe readme (?:does not|doesn't)\b/i,
   /\b(?:unfortunately|no information)\b/i,
+  // Describes the repository instead of the project: true, and useless.
+  /\b(?:repository|repo) (?:contains|for|with|that contains|is empty)\b/i,
+  /\b(?:empty|placeholder) (?:readme|repository|repo)\b/i,
+  /\b(?:only|just) (?:a|an|the) (?:license|licence|readme)\b/i,
 ];
 
 /** A portfolio line is about the work, not the writer. */

@@ -276,6 +276,21 @@ check('ungrouped repos fall back to "other"', byName(repos2, 'Bare').group === '
 check('a rejected description is retried, with a count', byName(repos2, 'RustDB').genAttempts === 2);
 check('an unchanged commit window is not re-summarised', !world.log.groqBodies.some((b) => b.response_format.json_schema.name === 'update_line'));
 
+/* ─── a summary the guard would now reject is written again ─────────── */
+
+{
+  const doc = JSON.parse(await read(root, 'data/repos.json'));
+  byName(doc.repos, 'SmolGPT').summary = 'Repository contains only a license file and an empty README.';
+  await writeFile(join(root, 'data/repos.json'), JSON.stringify(doc));
+  world = makeWorld({ groq: scriptedGroq({ bareWorks: true }) });
+  await run({ root, env, fetch: world.fetch, sleep: world.sleep, now: NOW + 5400000, log: quiet });
+  const redone = byName(JSON.parse(await read(root, 'data/repos.json')).repos, 'SmolGPT');
+  check('an accepted summary that fails a newer guard is regenerated',
+    redone.summary.startsWith('A decoder-only transformer') &&
+      world.log.groqBodies.some((b) => b.messages[1].content.includes('Repository: SmolGPT')),
+    redone.summary);
+}
+
 /* ─── run 3: truly nothing to do ────────────────────────────────────── */
 
 // RustDB has hit its retry limit and everything else is cached, so this run
