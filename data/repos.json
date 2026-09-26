@@ -281,7 +281,7 @@
       "createdAt": "2026-06-29T16:36:27Z",
       "contextHash": "b6f98f3a7ee7656b",
       "genStatus": "rejected",
-      "genAttempts": 1
+      "genAttempts": 2
     },
     {
       "name": "pitwall",
@@ -317,7 +317,7 @@
       "createdAt": "2026-06-25T11:53:39Z",
       "contextHash": "724bb45a1d010122",
       "genStatus": "rejected",
-      "genAttempts": 1
+      "genAttempts": 2
     },
     {
       "name": "DL-SP500",
