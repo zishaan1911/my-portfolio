@@ -270,8 +270,8 @@
       "url": "https://github.com/zishaan1911/UCCC2513-Mini-Project",
       "homepage": null,
       "description": null,
-      "summary": "A repository for a mini project.",
-      "summarySource": "groq",
+      "summary": null,
+      "summarySource": "github",
       "group": "coursework",
       "language": null,
       "stars": 2,
@@ -280,8 +280,8 @@
       "pushedAt": "2026-07-20T09:13:46Z",
       "createdAt": "2026-06-29T16:36:27Z",
       "contextHash": "b6f98f3a7ee7656b",
-      "genStatus": "ok",
-      "genAttempts": 0
+      "genStatus": "rejected",
+      "genAttempts": 1
     },
     {
       "name": "pitwall",
@@ -306,8 +306,8 @@
       "url": "https://github.com/zishaan1911/cppnum",
       "homepage": null,
       "description": null,
-      "summary": "Repository contains only a license file and an empty README.",
-      "summarySource": "groq",
+      "summary": null,
+      "summarySource": "github",
       "group": "systems",
       "language": null,
       "stars": 2,
@@ -316,8 +316,8 @@
       "pushedAt": "2026-06-25T11:53:40Z",
       "createdAt": "2026-06-25T11:53:39Z",
       "contextHash": "724bb45a1d010122",
-      "genStatus": "ok",
-      "genAttempts": 0
+      "genStatus": "rejected",
+      "genAttempts": 1
     },
     {
       "name": "DL-SP500",
@@ -396,7 +396,7 @@
       "url": "https://github.com/zishaan1911/rps-bot",
       "homepage": null,
       "description": null,
-      "summary": "A Python script implementing a rock‑paper‑scissors bot",
+      "summary": "A Python script implementing a rock‑paper‑scissors bot.",
       "summarySource": "groq",
       "group": "apps",
       "language": "Python",
